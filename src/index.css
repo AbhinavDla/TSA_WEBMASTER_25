@@ -4,7 +4,6 @@
   --base: #005F40;
   --white: #FFFFFF;
   --base-dark: #000000;
-  --goldthing: #FFD700;
 
   --default-spacing: 7vw;
 
@@ -19,14 +18,14 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat';
+  font-family: var(--base-font);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a{
-  color: var(--goldthing);
+  color: var(--white);
   text-decoration: none;
 }
 
