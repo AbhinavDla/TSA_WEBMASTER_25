@@ -2,10 +2,13 @@ import React from 'react'
 import Navbar from "../navbar/Navbar"
 import heroImage from "./hero_img.png"
 import "./homepage.css"
+import ourStoryImage1 from "./our_story_image_1.jpg"
+import edibleSpoon from "./edible_spoon.jpg"
 
 const homepage = () => {
   return (
-    <div className="homepage">
+    <>
+    <section className="homepage">
         <div className="green-thing"></div>
         <Navbar />
         <div className="hero">
@@ -21,7 +24,24 @@ const homepage = () => {
             <img src={heroImage} alt="" className="hero-img" />
           </div>
         </div>
-    </div>
+    </section>
+    <section className="our-story">
+      <div className="our-story-left">
+        <img src={ourStoryImage1} alt="" className="our-story-img1" />
+        <img src={edibleSpoon} alt="" className="our-story-img2" />
+      </div>
+      <div className="our-story-right">
+        <div className="section-header-container" id="our-story-header">
+          <h2 className="section-header">Our Story</h2>
+        </div>
+        <div className="our-story-text-container">
+          <p className="our-story-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          </p>
+        </div>
+      </div>
+    </section>
+    </>
   )
 }
 
