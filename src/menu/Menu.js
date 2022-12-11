@@ -16,7 +16,7 @@ const Menu = () => {
             </p>
           </div>
         </div>
-        <div className="menu-main">
+        <div className="menu-page-main">
           <div className="cusine">
             <div className="section-header-container">
               <h2 className="section-header">Italian</h2>
