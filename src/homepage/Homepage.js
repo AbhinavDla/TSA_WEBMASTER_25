@@ -41,6 +41,23 @@ const homepage = () => {
         </div>
       </div>
     </section>
+    <section>
+      <div className="menu-green-thing"></div>
+      <div className="section-header-container">
+        <h2 className="section-header" id="menu-section-header">Menu</h2>
+      </div>
+      <div className="menu-main">
+        <div className="menu-left">
+          <p className="menu-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+          </p>
+          <button className="menu-btn">View The Menu</button>
+        </div>
+        <div className="menu-right">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DJztXj2GPfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
     </>
   )
 }
