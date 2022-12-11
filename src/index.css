@@ -29,6 +29,49 @@ a{
   text-decoration: none;
 }
 
+.section-header-container{
+  height: 20vh;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: var(--default-spacing)
+}
+
+.section-header{
+  font-weight: 700;
+  font-family: var(--accent-font);
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
+  color: var(--base);
+}
+
+.background-hero{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background: url("./hero-bg.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.background-hero-text{
+  color: var(--white);
+  padding: 10vw 0 15vw var(--default-spacing);
+}
+
+.background-hero-heading{
+  font-family: var(--accent-font);
+  font-weight: 700;
+  font-size: clamp(2.3rem, 4vw, 6rem);
+}
+
+.background-hero-description{
+  font-size: clamp(1rem, 1.1vw, 2rem);
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
