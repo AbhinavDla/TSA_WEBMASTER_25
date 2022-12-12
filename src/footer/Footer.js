@@ -32,9 +32,8 @@ const Footer = () => {
             <h2 class="footer-header">Site Links</h2>
             <ul class="site-links">
                 <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"><a href="trips.html">Trips</a></li>
-                <li class="nav-item"><a href="blog.html">Vehicles</a></li>
+                <li class="nav-item"><a href="about.html">Menu</a></li>
+                <li class="nav-item"><a href="trips.html">Reservations</a></li>
                 <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -42,7 +41,7 @@ const Footer = () => {
             <h2 class="footer-header">Contact</h2>
             <div class="contact-method " id="contact-method-first">
                 <h3 class="contact-method-heading">Email</h3>
-                <p class="contact-method-description"><a href="">race2space@gmail.com</a></p>
+                <p class="contact-method-description"><a href="">thegreenspoon@gmail.com</a></p>
             </div>
             <div class="contact-method">
                 <h3 class="contact-method-heading">Phone Number</h3>
