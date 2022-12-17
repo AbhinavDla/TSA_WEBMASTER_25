@@ -17,7 +17,7 @@ const Reservations = () => {
           <div className="section-header-container">
             <h2 className="section-header">Make A Reservation</h2>
           </div>
-          <form action="" className="reservation-form" method="post" onSubmit="submit" data-netlify="true" netlify>
+          <form action="" name="reservations" className="reservation-form" method="post" onSubmit="submit" data-netlify="true">
             <div className="reservation-filters-container">
                 <div className="reservation-filter">
                   <FaCalendar className="filter-icon"/>
@@ -34,6 +34,28 @@ const Reservations = () => {
             </div>
             <button className="reservations-btn" type="submit">Make A Reservation</button>
           </form>
+        </section>
+        <section className="other-reservation">
+          <div className="other-reservation-container">
+            <div className="section-header-container" id="other-reservation-section-header">
+              <h2 className="section-header">Reserve By Phone</h2>
+            </div>
+            <div className="other-reservation-description-container">
+              <p className="other-reservation-description">
+                We take reservations for any available time between 9AM and 10PM. Tables will be marked as reserved during the time of reservation based on guests. Choice of seating area cannot be promised. Call us at (425)-123-4567 to book a table now.
+              </p>
+            </div>
+          </div>
+          <div className="other-reservation-container">
+            <div className="section-header-container" id="other-reservation-section-header">
+              <h2 className="section-header">Private Reservations</h2>
+            </div>
+            <div className="other-reservation-description-container">
+              <p className="other-reservation-description">
+                We take reservations for any available time between 9AM and 10PM. You must call ahead so food can be catered and the party hall can be blocked off from guests. We can accompany up to 150 guests per party. Call us at (425)-123-4567 to reserve a private party. 
+              </p>
+            </div>
+          </div>
         </section>
         <Footer />
     </div>

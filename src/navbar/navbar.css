@@ -23,13 +23,13 @@ nav{
     font-family: 'Oswald';
     font-weight: 700;
     font-size: 20px;
-    color: var(--base);
+    color: var(--white);
 }
 
 .logo-description{
     font-weight: 400;
     font-size: 12px;
-    color: var(--base-dark);
+    color: var(--white);
 }
 
 .nav-link-container{
@@ -60,6 +60,7 @@ nav{
     outline: none;
     display: none;
     font-size: 1.8rem;
+    color: var(--white)
 }
 
 @media only screen and (max-width: 1100px){
