@@ -2,6 +2,19 @@ section{
     height: 100vh;
 }
 
+.homepage{
+    position: relative;
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+
+.background-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
 .hero{
     display: flex;
     padding: 1vw var(--default-spacing);
@@ -19,7 +32,7 @@ section{
     font-family: var(--accent-font);
     font-weight: 700;
     font-size: clamp(1.5rem, 3vw, 5.5rem);
-    color: var(--base);
+    color: var(--white);
     padding: 0.7rem 0;
 }
 
@@ -27,6 +40,7 @@ section{
     font-size: clamp(0.8rem, 1vw, 2.5rem);
     width: 75%;
     padding: 0.7rem 0;
+    color: var(--white)
 }
 
 .hero-button-container{

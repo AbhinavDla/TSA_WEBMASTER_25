@@ -5,12 +5,18 @@ import heroImage from "./hero_img.png"
 import "./homepage.css"
 import ourStoryImage1 from "./our_story_image_1.jpg"
 import edibleSpoon from "./edible_spoon.jpg"
+import backgroundVideo from "./background_video.mp4"
 
 const homepage = () => {
   return (
     <>
     <section className="homepage">
-        <div className="green-thing"></div>
+        {/* <div className="green-thing">
+          
+        </div> */}
+        <video className="background-video" autoPlay loop muted>
+          <source src={backgroundVideo} type="video/mp4"></source>
+        </video>
         <Navbar />
         <div className="hero">
           <div className="hero-left">
@@ -22,7 +28,7 @@ const homepage = () => {
             </div>
           </div>
           <div className="hero-right">
-            <img src={heroImage} alt="" className="hero-img" />
+            {/* <img src={heroImage} alt="" className="hero-img" /> */}
           </div>
         </div>
     </section>
