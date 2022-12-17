@@ -1,6 +1,7 @@
 import React from 'react'
 import "./navbar.css"
 import Logo from './green_spoon_logo.png'
+import logoLight from "./logo_light.png"
 import {Link} from 'react-router-dom'
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 // import {faBars} from '@fortawesome/free-solid-svg-icons'
@@ -18,7 +19,7 @@ const Navbar = () => {
     <nav className="nav">
         <div className="logo-container">
             <Link to="/"><a href="/" className="logo-container-link">
-                <img src={Logo} alt="" className="logo-img"/>
+                <img src={logoLight} alt="" className="logo-img"/>
                 <div className="logo-text">
                     <h2 className="logo-header">The Green Spoon</h2>
                     <p className="logo-description">Vegan Foods • Meaty Flavors</p>

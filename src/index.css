@@ -2,8 +2,10 @@
 
 :root{
   --base: #005F40;
+  --base-hover: #005f3f81;
   --white: #FFFFFF;
   --base-dark: #000000;
+  --white-hover: #ffffff77;
 
   --default-spacing: 7vw;
 
@@ -70,6 +72,8 @@ a{
 .background-hero-description{
   font-size: clamp(1rem, 1.1vw, 2rem);
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

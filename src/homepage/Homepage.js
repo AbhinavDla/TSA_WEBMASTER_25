@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useRef, useMemo, useEffect} from 'react'
 import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
 import heroImage from "./hero_img.png"
@@ -6,29 +6,71 @@ import "./homepage.css"
 import ourStoryImage1 from "./our_story_image_1.jpg"
 import edibleSpoon from "./edible_spoon.jpg"
 import backgroundVideo from "./background_video.mp4"
+import {Link} from 'react-router-dom'
 
 const homepage = () => {
+
+  // const targetRef = useRef(null);
+  // const [isVisible, setIsVisible] = useState(false);
+
+  // const callbackFunction = entries => {
+  //   const [entry] = entries;
+  //   setIsVisible(entry.isIntersecting);
+  // }
+
+  // const options = useMemo(() => {
+  //   return {
+  //     root: 'null',
+  //     rootMargin: '0px',
+  //     threshold: 0.3
+  //   }
+  // }, [])
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(callbackFunction, options)
+  //   const currentTarget = targetRef.current;
+  //   if(currentTarget) observer.observe(currentTarget)
+
+  //   return() => {
+  //     if(currentTarget) observer.unobserve(currentTarget)
+  //   }
+  // }, [targetRef, options])
+
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) => {
+  //       if(entry.isIntersecting){
+  //           entry.target.classList.add('show')
+  //       }
+  //       else{
+  //           entry.target.classList.remove('show')
+  //       }
+  //   })
+  // })
+
+  // const hiddenElements = document.querySelectorAll('.hidden')
+  // hiddenElements.forEach((el) => observer.observe(el))
+
   return (
     <>
     <section className="homepage">
-        {/* <div className="green-thing">
+        <div className="green-thing">
           
-        </div> */}
+        </div>
         <video className="background-video" autoPlay loop muted>
           <source src={backgroundVideo} type="video/mp4"></source>
         </video>
         <Navbar />
-        <div className="hero">
+        <div className="hero" >
           <div className="hero-left">
             <h1 className="hero-header">Vegan Foods, Meaty Flavors</h1>
             <p className="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing eli1, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
             <div className="hero-button-container">
-              <button className="hero-main-button">Make A Reservation</button>
-              <button className="hero-secondary-button">View Menu</button>
+              <Link to="/reservations"><button className="hero-main-button">Make A Reservation</button></Link>
+              <Link to="/menu"><button className="hero-secondary-button">View Menu</button></Link>
             </div>
           </div>
           <div className="hero-right">
-            {/* <img src={heroImage} alt="" className="hero-img" /> */}
+            <img src={heroImage} alt="" className="hero-img" />
           </div>
         </div>
     </section>
@@ -58,7 +100,7 @@ const homepage = () => {
           <p className="menu-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
           </p>
-          <button className="menu-btn">View The Menu</button>
+          <Link to="/menu"><button className="menu-btn">View The Menu</button></Link>
         </div>
         <div className="menu-right">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/DJztXj2GPfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

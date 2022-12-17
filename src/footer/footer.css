@@ -112,11 +112,11 @@ b{
 .social-media-container{
     display: flex;
     gap: 0.5rem;
+    align-items: center;
 }
 
-.social-media-container > a > i{
-    color: var(--white);
-    font-size: 30px;
+.social-media-container > a > img{
+    width: 30px;
 }
 
 .footer-map{

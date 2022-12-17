@@ -1,21 +1,16 @@
 import React from 'react'
 import "./footer.css"
 import Map from "./map.png"
+import {Link} from 'react-router-dom'
+import facebookLogo from './facebook_logo.png'
+import instagramLogo from './instagram_logo.png'
+import tiktokLogo from './tiktok_logo.png'
+import twitterLogo from './twitter_logo.png'
+import youtubeLogo from './youtube_logo.png'
 
 const Footer = () => {
   return (
     <footer>
-        {/* <div class="description-and-logo">
-            <div class="logo-container footer-logo-container">
-                <a href="/">
-                    <i class="fa-solid fa-rocket logo-img footer-logo-img"></i>
-                    <h2 class="logo-text footer-logo-text">Race2Space</h2>
-                </a>
-            </div>
-            <p class="footer-description">
-                Race2Space is the world’s first space tourism company. We take you into the deep depths of space and let anyone become an astronaut without breaking the bank.  
-            </p>
-        </div> */}
         <div class="hours-section">
             <h2 class="footer-header">Hours</h2>
             <ul class="hours">
@@ -31,30 +26,30 @@ const Footer = () => {
         <div class="site-links-section">
             <h2 class="footer-header">Site Links</h2>
             <ul class="site-links">
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="about.html">Menu</a></li>
-                <li class="nav-item"><a href="trips.html">Reservations</a></li>
-                <li class="nav-item"><a href="contact.html">Contact</a></li>
+                <li class="nav-item"><Link to="/"><a>Home</a></Link></li>
+                <li class="nav-item"><Link to="/menu"><a>Menu</a></Link></li>
+                <li class="nav-item"><Link to="/reservations"><a>Reservations</a></Link></li>
+                <li class="nav-item"><Link to="/contact"><a>Contact</a></Link></li>
             </ul>
         </div>
         <div class="contact-info">
             <h2 class="footer-header">Contact</h2>
             <div class="contact-method " id="contact-method-first">
                 <h3 class="contact-method-heading">Email</h3>
-                <p class="contact-method-description"><a href="">thegreenspoon@gmail.com</a></p>
+                <p class="contact-method-description"><a href="mailto:thegreenspoon@gmail.com">thegreenspoon@gmail.com</a></p>
             </div>
             <div class="contact-method">
                 <h3 class="contact-method-heading">Phone Number</h3>
-                <p class="contact-method-description"><a href="">425-123-4567</a></p>
+                <p class="contact-method-description"><a href="tel:123-456-7890">425-123-4567</a></p>
             </div>
             <div class="contact-method">
                 <h3 class="contact-method-heading">Social Media</h3>
                 <div class="social-media-container">
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                    <a href=""><i class="fa-brands fa-youtube"></i></a>
-                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://facebook.com/thegreenspoon"><img src={facebookLogo} alt="" /></a>
+                    <a href="https://instagram.com/thegreenspoon"><img src={instagramLogo} alt=""/></a>
+                    <a href="https://tiktok.com/thegreenspoon"><img src={tiktokLogo} alt="" /></a>
+                    <a href="https://twitter.com/thegreenspoon"><img src={twitterLogo} alt="" /></a>
+                    <a href="https://youtube.com/thegreenspoon"><img src={youtubeLogo} alt="" /></a>
                 </div>
             </div>
         </div>

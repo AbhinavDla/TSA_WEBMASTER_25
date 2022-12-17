@@ -1,3 +1,12 @@
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+}
+
 section{
     height: 100vh;
 }
@@ -53,6 +62,12 @@ button{
     border: none;
     padding: 0.7rem 1.5rem;
     font-family: var(--base-font);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+button:hover{
+    transform: scale(1.2);
 }
 
 .hero-main-button{
@@ -68,18 +83,20 @@ button{
 }
 
 .green-thing{
-    background: var(--base);
+    /* background: var(--base);
     height: 200vh;
     max-height: 100vh;
     width: 50%;
     position: absolute;
     margin-left: 50%;
-    z-index: -1;
+    z-index: -1; */
     /* transform: translateX(20%) rotate(-20deg); */
+    display: none;
 }
 
 .hero-img{
-    width: 80%;
+    /* width: 80%; */
+    display: none;
 }
 
 /* Our Story Section */
@@ -346,6 +363,9 @@ button{
 
 
 @media only screen and (max-width: 1100px){
+    .homepage{
+        background: none;
+    }
 
     .hero{
         flex-direction: column;
@@ -361,8 +381,13 @@ button{
         width: 100%;
     }
 
+    .hero-header{
+        color: var(--base);
+    }
+
     .hero-description{
         width: 50%;
+        color: var(--base-darker);
     }
 
     .hero-right{
@@ -373,12 +398,21 @@ button{
         align-items: center;
     }
 
+    .background-video{
+        display: none;
+    }
+
     .hero-img{
+        display: block;
         width: 30vw;
         min-width: 280px;
     }
 
     .green-thing{
+       display: block;
+       background: var(--base);
+       position: absolute;
+       z-index: -1;
        margin-left: 0;
        margin-top: 50vh;
        width: 100%;
