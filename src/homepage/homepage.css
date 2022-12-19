@@ -13,7 +13,7 @@ section{
 
 .homepage{
     position: relative;
-    background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(90deg, rgb(0, 0, 0), #005f3f5b);
 }
 
 .background-video{

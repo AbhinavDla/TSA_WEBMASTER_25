@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import {useRef} from 'react'
 
-const Navbar = () => {
+const Navbar = (color) => {
   const navRef = useRef()
 
   const showNavbar = () => {

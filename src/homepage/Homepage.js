@@ -7,51 +7,16 @@ import ourStoryImage1 from "./our_story_image_1.jpg"
 import edibleSpoon from "./edible_spoon.jpg"
 import backgroundVideo from "./background_video.mp4"
 import {Link} from 'react-router-dom'
+import {motion as m} from 'framer-motion'
 
 const homepage = () => {
-
-  // const targetRef = useRef(null);
-  // const [isVisible, setIsVisible] = useState(false);
-
-  // const callbackFunction = entries => {
-  //   const [entry] = entries;
-  //   setIsVisible(entry.isIntersecting);
-  // }
-
-  // const options = useMemo(() => {
-  //   return {
-  //     root: 'null',
-  //     rootMargin: '0px',
-  //     threshold: 0.3
-  //   }
-  // }, [])
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(callbackFunction, options)
-  //   const currentTarget = targetRef.current;
-  //   if(currentTarget) observer.observe(currentTarget)
-
-  //   return() => {
-  //     if(currentTarget) observer.unobserve(currentTarget)
-  //   }
-  // }, [targetRef, options])
-
-  // const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach((entry) => {
-  //       if(entry.isIntersecting){
-  //           entry.target.classList.add('show')
-  //       }
-  //       else{
-  //           entry.target.classList.remove('show')
-  //       }
-  //   })
-  // })
-
-  // const hiddenElements = document.querySelectorAll('.hidden')
-  // hiddenElements.forEach((el) => observer.observe(el))
-
   return (
-    <>
+    <m.div 
+      initial={{opacity: 0.5}} 
+      animate={{opacity: 1}}
+      transition={{duration: 0.95, ease: 'easeOut'}}
+      exit={{opacity: 1}}
+    >
     <section className="homepage">
         <div className="green-thing">
           
@@ -60,7 +25,13 @@ const homepage = () => {
           <source src={backgroundVideo} type="video/mp4"></source>
         </video>
         <Navbar />
-        <div className="hero" >
+        <m.div 
+          className="hero" 
+          animate={{x: 0}}
+          initial={{x: '-100%'}}
+          transition={{duration: 0.85, ease: 'easeOut'}}
+          exit={{opacity: 1}}
+        >
           <div className="hero-left">
             <h1 className="hero-header">Vegan Foods, Meaty Flavors</h1>
             <p className="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing eli1, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
@@ -72,7 +43,7 @@ const homepage = () => {
           <div className="hero-right">
             <img src={heroImage} alt="" className="hero-img" />
           </div>
-        </div>
+        </m.div>
     </section>
     <section className="our-story">
       <div className="our-story-left">
@@ -249,7 +220,7 @@ const homepage = () => {
         </div>
       </section>
       <Footer />
-    </>
+    </m.div>
   )
 }
 

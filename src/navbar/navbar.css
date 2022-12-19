@@ -82,6 +82,7 @@ nav{
         background: var(--base);
         transition: 1s;
         transform: translateY(-100vh);
+        z-index: 100000;
     }
 
     .responsive-nav{
