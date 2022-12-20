@@ -1,15 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from "../navbar/Navbar"
 import "./contact.css"
 import Footer from "../footer/Footer"
 import {motion as m} from 'framer-motion'
 import emailjs from 'emailjs-com'
-import logoLight from "../logo_light.png"
 import logoDark from "../green_spoon_logo.png"
 import { useMediaQuery } from 'react-responsive';
 
 const Contact = () => {
-  const sendEmail = (e) => {
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [message, setMessage] = useState("")
+
+  const handleSubmit = (e) => {
     e.preventDefault()
 
     emailjs.sendForm(
@@ -22,6 +27,12 @@ const Contact = () => {
     }).catch(err => {
       console.log(err);
     })
+
+    setFirstName("")
+    setLastName("")
+    setEmail("")
+    setPhoneNumber("")
+    setMessage("")
   }
 
   const isMobile = useMediaQuery({ query: `(min-width: 1100px)` });
@@ -61,7 +72,7 @@ const Contact = () => {
         <section className="contact-form-container">
           <m.form 
             action="" 
-            onSubmit={sendEmail}
+            onSubmit={handleSubmit}
             className="contact-form"
             animate={{x: 0}}
             initial={{x: '-100%'}}
@@ -71,26 +82,26 @@ const Contact = () => {
             <div className="firstname-lastname contact-form-section">
               <div className="form-input">
                 <label htmlFor="" className="form-input-label">First Name</label>
-                <input type="text" name="first-name" id="" />
+                <input type="text" name="first-name" placeholder="John" id="" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
               </div>
               <div className="form-input form-input-right">
                 <label htmlFor="" className="form-input-label">Last Name</label>
-                <input type="text" name="last-name" id="" />
+                <input type="text" name="last-name" id="" placeholder="Doe" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
               </div>
             </div>
             <div className="phone-number-email contact-form-section">
               <div className="form-input">
                 <label htmlFor="" className="form-input-label">Phone Number</label>
-                <input type="number" name="phone-number" id="" />
+                <input type="number" name="phone-number" id="" placeholder="4251234567" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
               </div>
               <div className="form-input form-input-right">
                 <label htmlFor="" className="form-input-label">Email</label>
-                <input type="text" name="email" id="" />
+                <input type="text" name="email" id="" placeholder="johndoe@example.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
               </div>
             </div>
             <div className="message form-input">
               <label htmlFor="" className="form-input-label">Message</label>
-              <textarea className="message-textarea" name="message" id="" rows="10"></textarea>
+              <textarea className="message-textarea" name="message" id="" rows="10" placeholder="Hey, what's up" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
             </div>
             <button className="send-btn" type="submit">Send Message</button>
           </m.form>

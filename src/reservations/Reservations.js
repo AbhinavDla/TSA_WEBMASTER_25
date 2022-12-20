@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
 import { FaClock, FaCalendar, FaUser } from 'react-icons/fa'
@@ -6,9 +6,12 @@ import "./reservations.css"
 import {motion as m} from 'framer-motion'
 import emailjs from 'emailjs-com'
 import logoLight from "../logo_light.png"
-import logoDark from "../green_spoon_logo.png"
 
 const Reservations = () => {
+  const [date, setDate] = useState("")
+  const [time, setTime] = useState("")
+  const [guests, setGuests] = useState("")
+
   const sendEmail = (e) => {
     e.preventDefault()
 
@@ -22,6 +25,10 @@ const Reservations = () => {
     }).catch(err => {
       console.log(err);
     })
+
+    setDate("")
+    setTime("")
+    setGuests("")
   }
 
   return (
@@ -61,15 +68,15 @@ const Reservations = () => {
             <div className="reservation-filters-container">
                 <div className="reservation-filter">
                   <FaCalendar className="filter-icon"/>
-                  <input type="date" name="date" id="" />
+                  <input type="date" name="date" id="" value={date} onChange={(e) => setDate(e.target.value)}/>
                 </div>
                 <div className="reservation-filter">
                   <FaClock className="filter-icon"/>
-                  <input type="time" name="time" id="" />
+                  <input type="time" name="time" id="" value={time} onChange={(e) => setTime(e.target.value)}/>
                 </div>
                 <div className="reservation-filter">
                   <FaUser className="filter-icon"/>
-                  <input type="number" name="guests" id="" value="2"/>
+                  <input type="number" name="guests" id="" value={guests} onChange={(e) => setGuests(e.target.value)}/>
                 </div>
             </div>
             <button className="reservations-btn" type="submit">Make A Reservation</button>
