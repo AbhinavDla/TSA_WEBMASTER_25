@@ -1,9 +1,12 @@
 import React from 'react'
 import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
-import Food from "./food.png"
+import Food from "./images/food.png"
 import "./menu.css"
 import {motion as m} from 'framer-motion'
+import Tort from "./images/Tort.png"
+import logoLight from "../logo_light.png"
+import logoDark from "../green_spoon_logo.png"
 
 const Menu = () => {
   return (
@@ -14,7 +17,11 @@ const Menu = () => {
       exit={{opacity: 1}}
     >
       <div className="background-hero">
-        <Navbar />
+        <Navbar 
+          logo={logoLight}
+          color="white"
+          navLinkColor="white"
+        />
         <m.div 
           className="background-hero-text"
           animate={{x: 0}}
@@ -42,7 +49,7 @@ const Menu = () => {
           <div className="menu-cards">
             <div className="menu-card">
               <div className="food-image-container">
-                <img src={Food} alt="" className="food-image" />
+                <img src={Food} alt="Tortellini Picture" className="food-image" />
               </div>
               <div className="menu-text">
                 <div className="menu-text-top">

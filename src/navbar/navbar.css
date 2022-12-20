@@ -49,7 +49,7 @@ nav{
 }
 
 .nav-item > a{
-    color: var(--base-dark)
+    color: var(--base-dark);
 }
 
 .hamburger{

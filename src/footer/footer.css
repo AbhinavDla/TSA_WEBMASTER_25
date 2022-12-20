@@ -131,6 +131,14 @@ b{
     width: 100%;
 }
 
+.credits{
+    background-color: var(--base);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem var(--default-spacing);
+}
+
 @media only screen and (max-width:1100px){
     footer{
         flex-direction: column;
@@ -191,4 +199,11 @@ b{
     .footer-map{
         min-width: 275px;
     } 
+
+    .credits{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
 }

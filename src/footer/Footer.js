@@ -10,6 +10,7 @@ import youtubeLogo from './youtube_logo.png'
 
 const Footer = () => {
   return (
+    <>
     <footer>
         <div class="hours-section">
             <h2 class="footer-header">Hours</h2>
@@ -57,6 +58,11 @@ const Footer = () => {
             <img src={Map} alt="" />
         </div>
     </footer>
+    <div className="credits">
+        <p>Saakshith Chikoti, Veer Jain, Vedant Lad</p>
+        <p className="copyright">&copy;The Green Spoon 2023</p>
+    </div>
+    </>
   )
 }
 

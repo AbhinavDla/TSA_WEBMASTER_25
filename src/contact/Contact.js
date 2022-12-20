@@ -4,10 +4,13 @@ import "./contact.css"
 import Footer from "../footer/Footer"
 import {motion as m} from 'framer-motion'
 import emailjs from 'emailjs-com'
+import logoLight from "../logo_light.png"
+import logoDark from "../green_spoon_logo.png"
+import { useMediaQuery } from 'react-responsive';
 
 const Contact = () => {
   const sendEmail = (e) => {
-    // e.preventDefault()
+    e.preventDefault()
 
     emailjs.sendForm(
       'service_hjwh2ab',
@@ -21,14 +24,29 @@ const Contact = () => {
     })
   }
 
+  const isMobile = useMediaQuery({ query: `(min-width: 1100px)` });
+
   return (
     <m.div
       initial={{opacity: 0.5}} 
       animate={{opacity: 1}}
       transition={{duration: 0.95, ease: 'easeOut'}}
       exit={{opacity: 1}}
-    >
-        <Navbar />
+    >    
+        {isMobile ?
+          <Navbar 
+            logo={logoDark}
+            color="black"
+            navLinkColor="black"
+          />
+          :
+          <Navbar 
+            logo={logoDark}
+            color="black"
+            navLinkColor="white"
+          />
+        }
+        
         <m.div 
           className="section-header-container" 
           id="contact-section-header-container"

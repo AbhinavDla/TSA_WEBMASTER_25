@@ -5,10 +5,12 @@ import { FaClock, FaCalendar, FaUser } from 'react-icons/fa'
 import "./reservations.css"
 import {motion as m} from 'framer-motion'
 import emailjs from 'emailjs-com'
+import logoLight from "../logo_light.png"
+import logoDark from "../green_spoon_logo.png"
 
 const Reservations = () => {
   const sendEmail = (e) => {
-    // e.preventDefault()
+    e.preventDefault()
 
     emailjs.sendForm(
       'service_hjwh2ab',
@@ -30,7 +32,11 @@ const Reservations = () => {
       exit={{opacity: 1}}
     >
         <div className="background-hero">
-          <Navbar />
+          <Navbar 
+            logo={logoLight}
+            color="white"
+            navLinkColor="white"
+          />
           <m.div 
             className="background-hero-text"
             animate={{x: 0}}
