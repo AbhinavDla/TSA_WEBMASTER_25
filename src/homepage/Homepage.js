@@ -110,7 +110,7 @@ const Homepage = () => {
       <div className="menu-main">
         <div className="menu-left">
           <p className="menu-description">
-            From quick vegan burgers to take to go to creamy Tortellini Gorgonzola's you can experience almost anything your heart desires. The best part, they're all vegan!
+            From quick vegan burgers to take to go to creamy Tortellini Gorgonzola's you can experience almost anything your heart desires. You can mix and match from any cusine and have the most diverse meal of your life. The best part --its all vegan!
           </p>
           <Link to="/menu"><button className="menu-btn">View The Menu</button></Link>
         </div>

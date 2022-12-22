@@ -62,7 +62,7 @@ const Reservations = () => {
               initial={{x: '-600%'}}
               transition={{duration: 0.85, ease: 'easeOut'}}
               exit={{opacity: 1}}
-            >Make A Reservation</m.h2>
+            >Make An Online Reservation</m.h2>
           </div>
           <form action="" name="reservations" className="reservation-form" onSubmit={sendEmail}>
             <div className="reservation-filters-container">

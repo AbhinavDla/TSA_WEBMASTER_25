@@ -116,7 +116,8 @@ button:hover{
 
 .our-story{
     display: flex;
-    padding: 0 var(--default-spacing);
+    padding: var(--default-spacing);
+    height: fit-content;
 }
 
 .our-story-left{
@@ -125,6 +126,7 @@ button:hover{
     align-items: flex-start;
     justify-content: center;
     width: 50vw;
+    height: fit-content;
 }
 
 .our-story-img1{
@@ -144,10 +146,11 @@ button:hover{
 }
 
 .our-story-text-container{
-    height: 80vh;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: var(--default-spacing) 0;
     padding-left: var(--default-spacing);
 }
 
@@ -158,7 +161,7 @@ button:hover{
 /* Menu */
 
 .menu{
-    height: 70vh;
+    height: fit-content;
     padding-bottom: var(--default-spacing);
 }
 
@@ -540,11 +543,21 @@ button:hover{
     .gallery-main-container{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
+
+    }
+    .gallery-item:hover .image img{
+        transform:scale(1);
     }
 }
 
 @media only screen and (max-width: 328px){
     .our-story-right{
         padding: 2rem 0;
+    }
+}
+
+@media only screen and (max-height: 800px){
+    .our-story-right{
+        padding: 40vh 0;
     }
 }

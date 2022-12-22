@@ -1,12 +1,10 @@
 import React from 'react'
 import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
-import Food from "./images/food.png"
 import "./menu.css"
 import {motion as m} from 'framer-motion'
-import Tort from "./images/Tort.png"
 import logoLight from "../logo_light.png"
-import logoDark from "../green_spoon_logo.png"
+import menuItems from "./menu_items.json"
 
 const Menu = () => {
   return (
@@ -16,7 +14,7 @@ const Menu = () => {
       transition={{duration: 0.95, ease: 'easeOut'}}
       exit={{opacity: 1}}
     >
-      <div className="background-hero">
+      <div className="background-hero" id="menu-background">
         <Navbar 
           logo={logoLight}
           color="white"
@@ -44,81 +42,33 @@ const Menu = () => {
               initial={{x: '-600%'}}
               transition={{duration: 0.85, ease: 'easeOut'}}
               exit={{opacity: 1}}
-            >Italian</m.h2>
+            >Thai</m.h2>
           </div>
           <div className="menu-cards">
-            <div className="menu-card">
-              <div className="food-image-container">
-                <img src={Food} alt="Tortellini Picture" className="food-image" />
-              </div>
-              <div className="menu-text">
-                <div className="menu-text-top">
-                  <div className="menu-text-top-heading-price">
-                    <h3 className="menu-text-top-heading">Customized Pasta</h3>
-                    <p className="menu-text-top-price">$14.99</p>
+            
+            {menuItems.map((itemDetail, index) => {
+              return (
+              <div className="menu-card">
+                <div className="food-image-container" style={{"backgroundImage": `url(${itemDetail.image})`}}>
+                  {/* <img src={itemDetail.image} alt={itemDetail.name} className="food-image" /> */}
+                </div>
+                <div className="menu-text">
+                  <div className="menu-text-top">
+                    <div className="menu-text-top-heading-price">
+                      <h3 className="menu-text-top-heading">{itemDetail.name}</h3>
+                      <p className="menu-text-top-price">${itemDetail.price}</p>
+                    </div>
+                    <p className="food-description">{itemDetail.description}</p>
                   </div>
-                  <p className="food-description">This pasta can be customized fully, the type of pasta (angel hair, spaghetti, linguine, rigatoni). You can also choose between sauces (red sauce, white sauce, pink sauce, pesto). You can also choose the type of vegan meat (veggies, beef, chicken, pork, turkey)</p>
-                </div>
-                <div className="menu-text-bottom">
-                  <p className="calories">1000 - 1500 CAL</p>
-                  <p className="dietary-restrictions">GF DF</p>
-                </div>
-              </div>
-            </div>
-            <div className="menu-card">
-              <div className="food-image-container">
-                <img src={Food} alt="" className="food-image" />
-              </div>
-              <div className="menu-text">
-                <div className="menu-text-top">
-                  <div className="menu-text-top-heading-price">
-                    <h3 className="menu-text-top-heading">Customized Pasta</h3>
-                    <p className="menu-text-top-price">$14.99</p>
+                  <div className="menu-text-bottom">
+                    <p className="calories">{itemDetail.calories} CAL</p>
+                    <p className="dietary-restrictions">{itemDetail.restrictions}</p>
                   </div>
-                  <p className="food-description">This pasta can be customized fully, the type of pasta (angel hair, spaghetti, linguine, rigatoni). You can also choose between sauces (red sauce, white sauce, pink sauce, pesto). You can also choose the type of vegan meat (veggies, beef, chicken, pork, turkey)</p>
-                </div>
-                <div className="menu-text-bottom">
-                  <p className="calories">1000 - 1500 CAL</p>
-                  <p className="dietary-restrictions">GF DF</p>
                 </div>
               </div>
-            </div>
-            <div className="menu-card">
-              <div className="food-image-container">
-                <img src={Food} alt="" className="food-image" />
-              </div>
-              <div className="menu-text">
-                <div className="menu-text-top">
-                  <div className="menu-text-top-heading-price">
-                    <h3 className="menu-text-top-heading">Customized Pasta</h3>
-                    <p className="menu-text-top-price">$14.99</p>
-                  </div>
-                  <p className="food-description">This pasta can be customized fully, the type of pasta (angel hair, spaghetti, linguine, rigatoni). You can also choose between sauces (red sauce, white sauce, pink sauce, pesto). You can also choose the type of vegan meat (veggies, beef, chicken, pork, turkey)</p>
-                </div>
-                <div className="menu-text-bottom">
-                  <p className="calories">1000 - 1500 CAL</p>
-                  <p className="dietary-restrictions">GF DF</p>
-                </div>
-              </div>
-            </div>
-            <div className="menu-card">
-              <div className="food-image-container">
-                <img src={Food} alt="" className="food-image" />
-              </div>
-              <div className="menu-text">
-                <div className="menu-text-top">
-                  <div className="menu-text-top-heading-price">
-                    <h3 className="menu-text-top-heading">Customized Pasta</h3>
-                    <p className="menu-text-top-price">$14.99</p>
-                  </div>
-                  <p className="food-description">This pasta can be customized fully, the type of pasta (angel hair, spaghetti, linguine, rigatoni). You can also choose between sauces (red sauce, white sauce, pink sauce, pesto). You can also choose the type of vegan meat (veggies, beef, chicken, pork, turkey)</p>
-                </div>
-                <div className="menu-text-bottom">
-                  <p className="calories">1000 - 1500 CAL</p>
-                  <p className="dietary-restrictions">GF DF</p>
-                </div>
-              </div>
-            </div>
+            )
+            })}
+            
           </div>
         </div>
         <div className="cusine">
@@ -126,78 +76,7 @@ const Menu = () => {
             <h2 className="section-header">Mexican</h2>
           </div>
           <div className="menu-cards">
-            <div className="menu-card">
-              <div className="food-image-container">
-                <img src={Food} alt="" className="food-image" />
-              </div>
-              <div className="menu-text">
-                <div className="menu-text-top">
-                  <div className="menu-text-top-heading-price">
-                    <h3 className="menu-text-top-heading">Customized Pasta</h3>
-                    <p className="menu-text-top-price">$14.99</p>
-                  </div>
-                  <p className="food-description">This pasta can be customized fully, the type of pasta (angel hair, spaghetti, linguine, rigatoni). You can also choose between sauces (red sauce, white sauce, pink sauce, pesto). You can also choose the type of vegan meat (veggies, beef, chicken, pork, turkey)</p>
-                </div>
-                <div className="menu-text-bottom">
-                  <p className="calories">1000 - 1500 CAL</p>
-                  <p className="dietary-restrictions">GF DF</p>
-                </div>
-              </div>
-            </div>
-            <div className="menu-card">
-              <div className="food-image-container">
-                <img src={Food} alt="" className="food-image" />
-              </div>
-              <div className="menu-text">
-                <div className="menu-text-top">
-                  <div className="menu-text-top-heading-price">
-                    <h3 className="menu-text-top-heading">Customized Pasta</h3>
-                    <p className="menu-text-top-price">$14.99</p>
-                  </div>
-                  <p className="food-description">This pasta can be customized fully, the type of pasta (angel hair, spaghetti, linguine, rigatoni). You can also choose between sauces (red sauce, white sauce, pink sauce, pesto). You can also choose the type of vegan meat (veggies, beef, chicken, pork, turkey)</p>
-                </div>
-                <div className="menu-text-bottom">
-                  <p className="calories">1000 - 1500 CAL</p>
-                  <p className="dietary-restrictions">GF DF</p>
-                </div>
-              </div>
-            </div>
-            <div className="menu-card">
-              <div className="food-image-container">
-                <img src={Food} alt="" className="food-image" />
-              </div>
-              <div className="menu-text">
-                <div className="menu-text-top">
-                  <div className="menu-text-top-heading-price">
-                    <h3 className="menu-text-top-heading">Customized Pasta</h3>
-                    <p className="menu-text-top-price">$14.99</p>
-                  </div>
-                  <p className="food-description">This pasta can be customized fully, the type of pasta (angel hair, spaghetti, linguine, rigatoni). You can also choose between sauces (red sauce, white sauce, pink sauce, pesto). You can also choose the type of vegan meat (veggies, beef, chicken, pork, turkey)</p>
-                </div>
-                <div className="menu-text-bottom">
-                  <p className="calories">1000 - 1500 CAL</p>
-                  <p className="dietary-restrictions">GF DF</p>
-                </div>
-              </div>
-            </div>
-            <div className="menu-card">
-              <div className="food-image-container">
-                <img src={Food} alt="" className="food-image" />
-              </div>
-              <div className="menu-text">
-                <div className="menu-text-top">
-                  <div className="menu-text-top-heading-price">
-                    <h3 className="menu-text-top-heading">Customized Pasta</h3>
-                    <p className="menu-text-top-price">$14.99</p>
-                  </div>
-                  <p className="food-description">This pasta can be customized fully, the type of pasta (angel hair, spaghetti, linguine, rigatoni). You can also choose between sauces (red sauce, white sauce, pink sauce, pesto). You can also choose the type of vegan meat (veggies, beef, chicken, pork, turkey)</p>
-                </div>
-                <div className="menu-text-bottom">
-                  <p className="calories">1000 - 1500 CAL</p>
-                  <p className="dietary-restrictions">GF DF</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
