@@ -330,8 +330,23 @@ button:hover{
 .user-img{
     width: 40%;
     border-radius: 50%;
-    background: url("./john_doe.jpg");
     background-size: cover;
+}
+
+.muhammad{
+    background-image: url("./dababy.jpg");
+}
+
+.vedant{
+    background-image: url("./messi.jpg")
+}
+
+.saakshith{
+    background-image: url("./john_b.jpg")
+}
+
+.veer{
+    background-image: url("./Trump.webp")
 }
 
 .user-rating-container{

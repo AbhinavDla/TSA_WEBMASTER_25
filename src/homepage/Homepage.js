@@ -197,7 +197,7 @@ const Homepage = () => {
         <div class="testimonial-card-container">
             <div class="testimonial-card">
                 <div class="user-img-container">
-                    <div class="user-img"></div>
+                    <div class="user-img muhammad"></div>
                 </div>
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
@@ -206,30 +206,30 @@ const Homepage = () => {
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">
-                            "I had a really great time with the Race2Space premium tour. The trip was really smooth and it was a new experience. A fun place to bring my kids next time! The whole experience was luxurious and didnt lack anything, it was more than I could've asked for."
+                            "I had a really great experience with The Green Spoon. The ambience was luxurious and the staff were very friendly. A fun place to bring my kids next time! I got to try foods from multiple different cusines and it was cool trying all these new types of foods."
                         </p>
                     </div>
                 </div>
             </div>
             <div class="testimonial-card">
                 <div class="user-img-container">
-                    <div class="user-img"></div>
+                    <div class="user-img vedant"></div>
                 </div>
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
                         <h2 class="user-name">Vedant Lad</h2>
-                        <h3 class="user-location">★★★★★</h3>
+                        <h3 class="user-location">★★★★☆</h3>
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">
-                            "I had a really great time with the Race2Space premium tour. The trip was really smooth and it was a new experience. A fun place to bring my kids next time! The whole experience was luxurious and didnt lack anything, it was more than I could've asked for."
+                          "I had a really great experience with The Green Spoon. The ambience was luxurious and the staff were very friendly. A fun place to bring my kids next time! I got to try foods from multiple different cusines and it was cool trying all these new types of foods."
                         </p>
                     </div>
                 </div>
             </div>
             <div class="testimonial-card">
                 <div class="user-img-container">
-                    <div class="user-img"></div>
+                    <div class="user-img saakshith"></div>
                 </div>
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
@@ -238,14 +238,14 @@ const Homepage = () => {
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">
-                            "I had a really great time with the Race2Space premium tour. The trip was really smooth and it was a new experience. A fun place to bring my kids next time! The whole experience was luxurious and didnt lack anything, it was more than I could've asked for."
+                          "I had a really great experience with The Green Spoon. The ambience was luxurious and the staff were very friendly. A fun place to bring my kids next time! I got to try foods from multiple different cusines and it was cool trying all these new types of foods."
                         </p>
                     </div>
                 </div>
             </div>
             <div class="testimonial-card">
                 <div class="user-img-container">
-                    <div class="user-img"></div>
+                    <div class="user-img veer"></div>
                 </div>
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
@@ -254,7 +254,7 @@ const Homepage = () => {
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">
-                            "I had a really great time with the Race2Space premium tour. The trip was really smooth and it was a new experience. A fun place to bring my kids next time! The whole experience was luxurious and didnt lack anything, it was more than I could've asked for."
+                        "I had a really great experience with The Green Spoon. The ambience was luxurious and the staff were very friendly. A fun place to bring my kids next time! I got to try foods from multiple different cusines and it was cool trying all these new types of foods."
                         </p>
                     </div>
                 </div>
