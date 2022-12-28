@@ -22,7 +22,7 @@ const Navbar = (props) => {
                 <img src={props.logo} alt="" className="logo-img"/>
                 <div className="logo-text">
                     <h2 className="logo-header" style={{color: props.color}}>The Green Spoon</h2>
-                    <p className="logo-description" style={{color: props.color}}>Vegan Foods • Meaty Flavors</p>
+                    <p className="logo-description" style={{color: props.color}}>Meatless Foods • Meaty Flavors</p>
                 </div>
             </a></Link>
         </div>

@@ -71,7 +71,7 @@ const Homepage = () => {
             <h1 className="hero-header">Meatless Foods, Meaty Flavors</h1>
             <p className="hero-description">
               Looking for classic flavors from all around the world? 
-              A quick bite to go? A full meal including cusines from all around the world? We've got it all! And what's more -- it's ALL vegan!
+              A quick bite to go? A full meal including cusines from all around the world? We've got it all! And what's more -- it's ALL meatless!
             </p>
             <div className="hero-button-container">
               <Link to="/reservations"><button className="hero-main-button">Make A Reservation</button></Link>
@@ -110,7 +110,7 @@ const Homepage = () => {
       <div className="menu-main">
         <div className="menu-left">
           <p className="menu-description">
-            From quick vegan burgers to take to go to creamy Tortellini Gorgonzola's you can experience almost anything your heart desires. You can mix and match from any cusine and have the most diverse meal of your life. The best part --its all vegan!
+            From quick vegan burgers to take to go to creamy Tortellini Gorgonzola's you can experience almost anything your heart desires. You can mix and match from any cusine and have the most diverse meal of your life. The best part --its all meatless!
           </p>
           <Link to="/menu"><button className="menu-btn">View The Menu</button></Link>
         </div>

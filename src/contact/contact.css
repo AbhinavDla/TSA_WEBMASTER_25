@@ -48,11 +48,12 @@
     height: 30%;
     border: 1px solid rgba(0, 0, 0, 0.4);
     font-family: var(--base-font);
+    padding-left: 1rem;
 }
 
 .form-input-right{
     align-items: flex-end;
-    padding-left: 10%;
+    padding-left: 15%;
 }
 
 .form-input-right > label{
@@ -61,9 +62,16 @@
 
 .message-textarea{
     resize: none;
-    width: 100%;
+    width: 97%;
     border: 1px solid rgba(0, 0, 0, 0.4);
     font-family: var(--base-font);
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.checkbox-label{
+    font-size: 11px;
+    padding: 0 10px;
 }
 
 .send-btn{

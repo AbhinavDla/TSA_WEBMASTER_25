@@ -1,4 +1,4 @@
-[
+export default [
     {
         "cusine": "thai",
         "name": "Hot Basil",

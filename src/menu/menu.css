@@ -2,6 +2,22 @@
     background-image: url("./menu_background.jpg");
 }
 
+.search-bar-container{
+    padding: 0 var(--default-spacing);
+    padding-top: var(--default-spacing);
+}
+
+.search-bar-container > input{
+    padding: 1vw;
+    margin-left: 0rem;
+    width: 100%;
+}
+
+
+.search-bar-container > label{
+    font-weight: bold;
+}
+
 .menu-page-main{
     display: flex;
     flex-direction: column;

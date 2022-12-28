@@ -1,12 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
 import "./menu.css"
 import {motion as m} from 'framer-motion'
 import logoLight from "../logo_light.png"
-import menuItems from "./menu_items.json"
+import menuItems from "./menu_items"
+
+const getFilteredItems = (query, menuItems) => {
+  if(!query){
+    return menuItems
+  }
+  else{  
+    return menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()))
+  }
+}
 
 const Menu = () => {
+  const [query, setQuery] = useState('')
+
+  const filteredItems = getFilteredItems(query, menuItems)
+  console.log(filteredItems)
+
   return (
     <m.div
       initial={{opacity: 0.5}} 
@@ -33,6 +47,10 @@ const Menu = () => {
           </p>
         </m.div>
       </div>
+      <div className="search-bar-container">
+        <label htmlFor="">Search</label>
+        <input type="text" onChange={e => setQuery(e.target.value)}/>
+      </div>
       <div className="menu-page-main">
         <div className="cusine">
           <div className="section-header-container">
@@ -46,7 +64,8 @@ const Menu = () => {
           </div>
           <div className="menu-cards">
             
-            {menuItems.map((itemDetail, index) => {
+            {
+            filteredItems.map((itemDetail, index) => {
               return (
               <div className="menu-card">
                 <div className="food-image-container" style={{"backgroundImage": `url(${itemDetail.image})`}}>
@@ -55,7 +74,7 @@ const Menu = () => {
                 <div className="menu-text">
                   <div className="menu-text-top">
                     <div className="menu-text-top-heading-price">
-                      <h3 className="menu-text-top-heading">{itemDetail.name}</h3>
+                      <h3 className="menu-text-top-heading" key={itemDetail.name}>{itemDetail.name}</h3>
                       <p className="menu-text-top-price">${itemDetail.price}</p>
                     </div>
                     <p className="food-description">{itemDetail.description}</p>
@@ -66,9 +85,8 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
-            )
-            })}
-            
+            )})
+            }
           </div>
         </div>
         <div className="cusine">

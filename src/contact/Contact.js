@@ -13,6 +13,7 @@ const Contact = () => {
   const [email, setEmail] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
   const [message, setMessage] = useState("")
+  const [checked, setChecked] = useState(true)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -33,6 +34,7 @@ const Contact = () => {
     setEmail("")
     setPhoneNumber("")
     setMessage("")
+    setChecked(true)
   }
 
   const isMobile = useMediaQuery({ query: `(min-width: 1100px)` });
@@ -102,6 +104,10 @@ const Contact = () => {
             <div className="message form-input">
               <label htmlFor="" className="form-input-label">Message</label>
               <textarea className="message-textarea" name="message" id="" rows="10" placeholder="Hey, what's up" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+            </div>
+            <div className="checkbox-container">
+              <input type="checkbox" name="checkbox" id="" value={checked} onChange={(e) => setChecked(e.target.value)}/>
+              <label htmlFor="" className="checkbox-label">Subscribe to recieve announcments about new seasonal menus, offers, and more</label>
             </div>
             <button className="send-btn" type="submit">Send Message</button>
           </m.form>
