@@ -163,14 +163,7 @@ button:hover{
 .menu{
     height: fit-content;
     padding-bottom: var(--default-spacing);
-}
-
-.menu-green-thing{
-    height: 70%;
-    width: 100%;
-    background-color: var(--base);
-    position: absolute;
-    z-index: -1;
+    background-color: var(--base)
 }
 
 #menu-section-header{
@@ -490,15 +483,6 @@ button:hover{
     .our-story-text{
         font-size: clamp(0.8rem, 1.5vw, 2rem);
         line-height: 25px;
-    }
-
-    .menu{
-        height: fit-content;
-        /* padding: 5rem 0; */
-    }
-
-    .menu-green-thing{
-        height: 100%;
     }
 
     .menu-main{
