@@ -37,7 +37,8 @@ a{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: var(--default-spacing)
+  padding-left: var(--default-spacing);
+  padding-right: var(--default-spacing);
 }
 
 .section-header{

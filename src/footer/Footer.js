@@ -7,6 +7,7 @@ import instagramLogo from './instagram_logo.png'
 import tiktokLogo from './tiktok_logo.png'
 import twitterLogo from './twitter_logo.png'
 import youtubeLogo from './youtube_logo.png'
+import yelpLogo from './yelp_logo.png'
 
 const Footer = () => {
   return (
@@ -46,11 +47,12 @@ const Footer = () => {
             <div class="contact-method">
                 <h3 class="contact-method-heading">Social Media</h3>
                 <div class="social-media-container">
-                    <a href="https://www.facebook.com/profile.php?id=100090091532986"><img src={facebookLogo} alt="" /></a>
-                    <a href="https://www.instagram.com/_thegreenspoon_/"><img src={instagramLogo} alt=""/></a>
-                    <a href="https://www.tiktok.com/@_thegreenspoon_?lang=en"><img src={tiktokLogo} alt="" /></a>
-                    <a href="https://twitter.com/_TheGreenSpoon_"><img src={twitterLogo} alt="" /></a>
-                    <a href="https://www.youtube.com/channel/UC1M35IKr3Rj0zymx-AEeaAw"><img src={youtubeLogo} alt="" /></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100090091532986"><img src={facebookLogo} alt="" /></a>
+                    <a target="_blank" href="https://www.instagram.com/_thegreenspoon_/"><img src={instagramLogo} alt=""/></a>
+                    <a target="_blank" href="https://www.tiktok.com/@_thegreenspoon_?lang=en"><img src={tiktokLogo} alt="" /></a>
+                    <a target="_blank" href="https://twitter.com/_TheGreenSpoon_"><img src={twitterLogo} alt="" /></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UC1M35IKr3Rj0zymx-AEeaAw"><img src={youtubeLogo} alt="" /></a>
+                    <a target="_blank" href="https://biz.yelp.com/biz_info/ip-kKyB8jQmYGavOEKvLiQ"><img src={yelpLogo} alt="" /></a>
                 </div>
             </div>
         </div>
