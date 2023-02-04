@@ -131,6 +131,11 @@ b{
     width: 100%;
 }
 
+.footer-map > img:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out .5s;
+}
+
 .credits{
     background-color: var(--base);
     color: var(--white);

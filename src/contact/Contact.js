@@ -68,8 +68,8 @@ const Contact = () => {
           transition={{duration: 0.85, ease: 'easeOut'}}
           exit={{opacity: 1}}
         >
-          <h2 className="section-header">Do You Have Any Questions?</h2>
-          <p>Dont be a stranger, contact us directly with any questions or concerns :)</p>
+          <h2 className="section-header">Questions or Concerns?</h2>
+          <p>Dont be a stranger, contact us directly with any questions or concerns :) Contact us if you have any feedback, questions or comments on the restaurant or the website itself, we promise to reply within a day.</p>
         </m.div>
         <section className="contact-form-container">
           <m.form 

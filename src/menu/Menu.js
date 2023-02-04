@@ -53,7 +53,7 @@ const Menu = () => {
       </div>
       <div className="menu-page-main">
         <div className="cusine">
-          <div className="section-header-container">
+          {/* <div className="section-header-container">
             <m.h2 
               className="section-header"
               animate={{x: 0}}
@@ -61,13 +61,14 @@ const Menu = () => {
               transition={{duration: 0.85, ease: 'easeOut'}}
               exit={{opacity: 1}}
             >Thai</m.h2>
-          </div>
+          </div> */}
           <div className="menu-cards">
             
             {
             filteredItems.map((itemDetail, index) => {
               return (
               <div className="menu-card">
+                <h1 className="cusine-tag">{itemDetail.cusine}</h1>
                 <div className="food-image-container" style={{"backgroundImage": `url(${itemDetail.image})`}}>
                   {/* <img src={itemDetail.image} alt={itemDetail.name} className="food-image" /> */}
                 </div>
@@ -87,14 +88,6 @@ const Menu = () => {
               </div>
             )})
             }
-          </div>
-        </div>
-        <div className="cusine">
-          <div className="section-header-container">
-            <h2 className="section-header">Mexican</h2>
-          </div>
-          <div className="menu-cards">
-            
           </div>
         </div>
       </div>

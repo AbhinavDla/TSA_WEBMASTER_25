@@ -5,6 +5,7 @@
 .search-bar-container{
     padding: 0 var(--default-spacing);
     padding-top: var(--default-spacing);
+    padding-bottom: var(--default-spacing);
 }
 
 .search-bar-container > input{
@@ -43,6 +44,14 @@
     flex-direction: column;
     box-shadow: 0px 4px 17px 14px rgba(0, 0, 0, 0.25);
     padding: 2rem;
+}
+
+.cusine-tag{
+    display: inline;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    background-color: var(--base);
+    color: var(--white);
 }
 
 .food-image-container{
