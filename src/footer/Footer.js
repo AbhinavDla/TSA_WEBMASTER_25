@@ -38,11 +38,11 @@ const Footer = () => {
             <h2 class="footer-header">Contact</h2>
             <div class="contact-method " id="contact-method-first">
                 <h3 class="contact-method-heading">Email</h3>
-                <p class="contact-method-description"><a href="mailto:thegreenspoon@gmail.com">thegreenspoon@gmail.com</a></p>
+                <p class="contact-method-description"><a href="mailto:greenspoonservices@gmail.com">greenspoonservices@gmail.com</a></p>
             </div>
             <div class="contact-method">
                 <h3 class="contact-method-heading">Phone Number</h3>
-                <p class="contact-method-description"><a href="tel:123-456-7890">425-123-4567</a></p>
+                <p class="contact-method-description"><a href="tel:123-456-7890">425-553-8188</a></p>
             </div>
             <div class="contact-method">
                 <h3 class="contact-method-heading">Social Media</h3>
