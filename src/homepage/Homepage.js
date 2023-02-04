@@ -54,8 +54,8 @@ const Homepage = () => {
           /> 
           : 
           <Navbar 
-            logo={logoDark}
-            color="black"
+            logo={logoLight}
+            color="white"
             navLinkColor="white"
           /> 
         }
@@ -70,8 +70,8 @@ const Homepage = () => {
           <div className="hero-left">
             <h1 className="hero-header">Meatless Foods, Meaty Flavors</h1>
             <p className="hero-description">
-              Looking for classic flavors from all around the world? 
-              A quick bite to go? A full meal including cusines from all around the world? We've got it all! And what's more -- it's ALL meatless!
+              Looking for classic flavors from around the world?
+              A quick bite to go? A full meal featuring cuisines from around the world? We've got it all, and it's all meatless!
             </p>
             <div className="hero-button-container">
               <Link to="/reservations"><button className="hero-main-button">Make A Reservation</button></Link>
@@ -94,10 +94,7 @@ const Homepage = () => {
         </div>
         <div className="our-story-text-container">
           <p className="our-story-text">
-            It all started with our visit to a nearby poultry farm where the idea of a Vegan restaurant first came about. We knew that there is a market for vegan food eaters since 
-            We hired chefs who have learnt from the greatest from all around the world specializing in cusinies through which food represents the story of that region. 
-            We have observered how food has brought people together and in spirit of that we give away leftovers to our nearest church and homeless shelters. Our restaurant has 
-            partnered up with incredible eats to bring edible silverware to make the planet ever so slighlty more liveable. It all happens one spoon at a time.
+          It all started with our visit to a nearby poultry farm where the idea of a vegan restaurant first came about. We knew that there was a market for vegan food eaters, so we hired chefs who have learned from the greatest from all around the world, specializing in cuisines that represent the story of that region. We have observed how food has brought people together, and in the spirit of that, we give away leftovers to our nearest church and homeless shelters. Our restaurant has partnered up with Incredible Eats to bring edible silverware, making the planet ever so slightly more livable. It all happens one spoon at a time.
           </p>
         </div>
       </div>
@@ -110,7 +107,7 @@ const Homepage = () => {
       <div className="menu-main">
         <div className="menu-left">
           <p className="menu-description">
-            From quick vegan burgers to take to go to creamy Tortellini Gorgonzola's you can experience almost anything your heart desires. You can mix and match from any cusine and have the most diverse meal of your life. The best part --its all meatless!
+          From quick vegan burgers to take-away to creamy Tortellini Gorgonzola's, you can experience almost anything your heart desires. You can mix and match from any cuisine and have the most diverse meal of your life. The best part - it's all meatless!
           </p>
           <Link to="/menu"><button className="menu-btn">View The Menu</button></Link>
         </div>
@@ -206,7 +203,7 @@ const Homepage = () => {
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">
-                            "I had a really great experience with The Green Spoon. The ambience was luxurious and the staff were very friendly. A fun place to bring my kids next time! I got to try foods from multiple different cusines and it was cool trying all these new types of foods."
+                          "I have been a long-time fan of this vegetarian restaurant and it never disappoints. The flavors are always bold, the ingredients are fresh, and the portions are generous. Whether you're a vegetarian or not, you're sure to find something you'll love here!"
                         </p>
                     </div>
                 </div>
@@ -222,7 +219,7 @@ const Homepage = () => {
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">
-                          "I had a really great experience with The Green Spoon. The ambience was luxurious and the staff were very friendly. A fun place to bring my kids next time! I got to try foods from multiple different cusines and it was cool trying all these new types of foods."
+                          "The atmosphere at this restaurant is perfect for a relaxing meal. The staff is friendly, the lighting is soft, and the music is soothing. And then there's the food – every dish is bursting with flavor and nutrition. A must-visit for any foodie!"
                         </p>
                     </div>
                 </div>
@@ -238,7 +235,7 @@ const Homepage = () => {
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">
-                          "I had a really great experience with The Green Spoon. The ambience was luxurious and the staff were very friendly. A fun place to bring my kids next time! I got to try foods from multiple different cusines and it was cool trying all these new types of foods."
+                          "I recently took my meat-loving friends to this vegetarian restaurant, and they were pleasantly surprised. They loved the taste and quality of the food, and couldn't believe it was all plant-based. If you're looking for a healthy, satisfying meal, this is the place to go."
                         </p>
                     </div>
                 </div>

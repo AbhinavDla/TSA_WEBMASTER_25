@@ -51,7 +51,7 @@ export default [
         "calories": 400,
         "price": 15.95,
         "restrictions": "SPICY",
-        "image": "https://norecipes.com/wp-content/uploads/2016/09/pad-kee-mao.1024x1024-1.jpg"
+        "image": "https://thefoodietakesflight.com/wp-content/uploads/2020/11/pad-kee-mao-38-1-687x1024.png"
     },
     {
         "cusine": "Thai",
