@@ -74,6 +74,10 @@ a{
   font-size: clamp(1rem, 1.1vw, 2rem);
 }
 
+textarea:focus, input:focus{
+  outline: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

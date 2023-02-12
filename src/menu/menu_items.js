@@ -2,7 +2,7 @@ export default [
     {
         "cusine": "Thai",
         "name": "Hot Basil",
-        "description": " Thais comfort food. Stir-fried garlic, chopped green bean, bell peppers, and holy basil in house special sauce. Comes with a sunny-side-up fried egg and stir-fried tofu.",
+        "description": "Thais comfort food. Stir-fried garlic, chopped green bean, bell peppers, and holy basil in house special sauce. Comes with a sunny-side-up fried egg and stir-fried tofu.",
         "calories": 400,
         "price": 13.95,
         "restrictions": null,

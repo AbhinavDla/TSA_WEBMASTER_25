@@ -10,6 +10,25 @@
     gap: 2rem;
 }
 
+.reservation-info-container{
+    
+}
+
+.reservation-info-container > div{
+    padding: 1rem 0;
+}
+
+.reservation-info-container > div > input{
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.reservation-info-container > div > input::placeholder{
+    color: rgba(0, 0, 0, 0.25)
+}
+
 .reservation-filters-container{
     display: flex;
     justify-content: space-between;

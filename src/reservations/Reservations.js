@@ -11,6 +11,9 @@ const Reservations = () => {
   const [date, setDate] = useState("")
   const [time, setTime] = useState("")
   const [guests, setGuests] = useState("")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -29,6 +32,10 @@ const Reservations = () => {
     setDate("")
     setTime("")
     setGuests("")
+    setName("")
+    setEmail("")
+
+    window.alert("Thank you for submitting a reservation! You will recieve an email confirmation shortly")
   }
 
   return (
@@ -65,18 +72,29 @@ const Reservations = () => {
             >Make An Online Reservation</m.h2>
           </div>
           <form action="" name="reservations" className="reservation-form" onSubmit={sendEmail}>
+            <div className="reservation-info-container">
+              <div className="">
+                <label htmlFor="">Name</label>
+                <input type="text" name="name" id="" placeholder="John Doe" value={name} onChange={(e) => setName(e.target.value)}/>
+              </div>
+              <div className="">
+                <label htmlFor="">Email</label>
+                <input type="text" name="email" id="" placeholder="example123@example.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
+              </div>
+             
+            </div>
             <div className="reservation-filters-container">
                 <div className="reservation-filter">
                   <FaCalendar className="filter-icon"/>
-                  <input type="date" name="date" id="" value={date} onChange={(e) => setDate(e.target.value)}/>
+                  <input type="date" name="date" id="" value={date} onChange={(e) => setDate(e.target.value)}  min='2023-02-01'/>
                 </div>
                 <div className="reservation-filter">
                   <FaClock className="filter-icon"/>
-                  <input type="time" name="time" id="" value={time} onChange={(e) => setTime(e.target.value)}/>
+                  <input type="time" name="time" id="" value={time} onChange={(e) => setTime(e.target.value)} min="09:00" max="22:00"/>
                 </div>
                 <div className="reservation-filter">
                   <FaUser className="filter-icon"/>
-                  <input type="number" name="guests" id="" value={guests} onChange={(e) => setGuests(e.target.value)}/>
+                  <input type="number" name="guests" id="" value={guests} onChange={(e) => setGuests(e.target.value)} min="1" max="20" />
                 </div>
             </div>
             <button className="reservations-btn" type="submit">Make A Reservation</button>

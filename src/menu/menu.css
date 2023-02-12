@@ -21,8 +21,12 @@
 
 .menu-page-main{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0;
+}
+
+.cusine{
+    width: 70%;
 }
 
 .menu-cards{
@@ -95,4 +99,14 @@
     justify-content: space-between;
     color: var(--base);
     font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-page-main{
+        flex-direction: column;
+    }
+
+    .cusine{
+        width: 100%;
+    }
 }

@@ -1,10 +1,14 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
 import "./menu.css"
 import {motion as m} from 'framer-motion'
 import logoLight from "../logo_light.png"
-import menuItems from "./menu_items"
+// import menuItems from "./menu_items"
+import {db} from "../firebase"
+import { collection, getDocs } from 'firebase/firestore'
+import FilterBar from './filter/FilterBar'
+
 
 const getFilteredItems = (query, menuItems) => {
   if(!query){
@@ -16,10 +20,23 @@ const getFilteredItems = (query, menuItems) => {
 }
 
 const Menu = () => {
+
+  const [menuItems, setMenuItems] = useState([])
+  const menuItemsRef = collection(db, "menu-items")
+
+  useEffect(() => {
+    const getMenuItems = async () => {
+      const data = await getDocs(menuItemsRef)
+      setMenuItems(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    }
+
+    getMenuItems()
+  })
+
   const [query, setQuery] = useState('')
 
   const filteredItems = getFilteredItems(query, menuItems)
-  console.log(filteredItems)
+
 
   return (
     <m.div
@@ -52,20 +69,10 @@ const Menu = () => {
         <input type="text" onChange={e => setQuery(e.target.value)}/>
       </div>
       <div className="menu-page-main">
+        <FilterBar />
         <div className="cusine">
-          {/* <div className="section-header-container">
-            <m.h2 
-              className="section-header"
-              animate={{x: 0}}
-              initial={{x: '-600%'}}
-              transition={{duration: 0.85, ease: 'easeOut'}}
-              exit={{opacity: 1}}
-            >Thai</m.h2>
-          </div> */}
           <div className="menu-cards">
-            
-            {
-            filteredItems.map((itemDetail, index) => {
+            {filteredItems.map((itemDetail, index) => {
               return (
               <div className="menu-card">
                 <h1 className="cusine-tag">{itemDetail.cusine}</h1>
