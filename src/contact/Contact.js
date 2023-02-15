@@ -6,6 +6,8 @@ import {motion as m} from 'framer-motion'
 import emailjs from 'emailjs-com'
 import logoDark from "../green_spoon_logo.png"
 import { useMediaQuery } from 'react-responsive';
+import {db} from "../firebase"
+import { collection, addDoc } from 'firebase/firestore'
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("")
@@ -15,8 +17,17 @@ const Contact = () => {
   const [message, setMessage] = useState("")
   const [checked, setChecked] = useState(true)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+
+    await addDoc(collection(db, 'contacts'), {
+      email: email,
+      firstName: firstName,
+      lastName: lastName,
+      phone: phoneNumber,
+      message: message,
+      subscribed: checked
+    })
 
     emailjs.sendForm(
       'service_hjwh2ab',
@@ -35,6 +46,8 @@ const Contact = () => {
     setPhoneNumber("")
     setMessage("")
     setChecked(true)
+
+    window.alert("Thank you for messaging us! We will respond to you soon!")
   }
 
   const isMobile = useMediaQuery({ query: `(min-width: 1100px)` });

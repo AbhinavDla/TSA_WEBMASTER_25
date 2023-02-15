@@ -6,6 +6,8 @@ import "./reservations.css"
 import {motion as m} from 'framer-motion'
 import emailjs from 'emailjs-com'
 import logoLight from "../logo_light.png"
+import {db} from "../firebase"
+import { collection, addDoc } from 'firebase/firestore'
 
 const Reservations = () => {
   const [date, setDate] = useState("")
@@ -14,9 +16,18 @@ const Reservations = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
 
-
-  const sendEmail = (e) => {
+  const createReservation = async (e) => {
     e.preventDefault()
+
+    await addDoc(collection(db, 'reservations'), {
+      email: email,
+      guests: guests,
+      name: name,
+      time: [
+        date,
+        time
+      ]
+    })
 
     emailjs.sendForm(
       'service_hjwh2ab',
@@ -71,7 +82,7 @@ const Reservations = () => {
               exit={{opacity: 1}}
             >Make An Online Reservation</m.h2>
           </div>
-          <form action="" name="reservations" className="reservation-form" onSubmit={sendEmail}>
+          <form action="" name="reservations" className="reservation-form" onSubmit={createReservation}>
             <div className="reservation-info-container">
               <div className="">
                 <label htmlFor="">Name</label>
@@ -107,7 +118,7 @@ const Reservations = () => {
             </div>
             <div className="other-reservation-description-container">
               <p className="other-reservation-description">
-                We take reservations for any available time between 9AM and 10PM. Tables will be marked as reserved during the time of reservation based on guests. Choice of seating area cannot be promised. Call us at (425)-123-4567 to book a table now.
+                We take reservations for any available time between 9AM and 10PM. Tables will be marked as reserved during the time of reservation based on guests. Choice of seating area cannot be promised. Call us at (425)-553-8188 to book a table now.
               </p>
             </div>
           </div>
@@ -117,7 +128,7 @@ const Reservations = () => {
             </div>
             <div className="other-reservation-description-container">
               <p className="other-reservation-description">
-                We take reservations for any available time between 9AM and 10PM. You must call ahead so food can be catered and the party hall can be blocked off from guests. We can accompany up to 150 guests per party. Call us at (425)-123-4567 to reserve a private party. 
+                We take reservations for any available time between 9AM and 10PM. You must call ahead so food can be catered and the party hall can be blocked off from guests. We can accompany up to 150 guests per party. Call us at (425)-553-8188 to reserve a private party. 
               </p>
             </div>
           </div>

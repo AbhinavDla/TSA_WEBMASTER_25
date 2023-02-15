@@ -215,7 +215,7 @@ const Homepage = () => {
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
                         <h2 class="user-name">Vedant Lad</h2>
-                        <h3 class="user-location">★★★★☆</h3>
+                        <h3 class="user-location">★★★★★</h3>
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">
@@ -231,7 +231,7 @@ const Homepage = () => {
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
                         <h2 class="user-name">Saakshith Chikoti</h2>
-                        <h3 class="user-location">★★★☆☆</h3>
+                        <h3 class="user-location">★★★★★</h3>
                     </div>
                     <div class="user-rating-container-bottom">
                         <p class="user-rating-description">

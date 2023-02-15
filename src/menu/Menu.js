@@ -37,6 +37,10 @@ const Menu = () => {
 
   const filteredItems = getFilteredItems(query, menuItems)
 
+  const generateCusineDataForDropdown = () => {
+    return [...new Set(filteredItems.map((itemDetail) => itemDetail.cusine))]
+  }
+
 
   return (
     <m.div
@@ -69,7 +73,7 @@ const Menu = () => {
         <input type="text" onChange={e => setQuery(e.target.value)}/>
       </div>
       <div className="menu-page-main">
-        <FilterBar />
+        <FilterBar cusines={generateCusineDataForDropdown()}/>
         <div className="cusine">
           <div className="menu-cards">
             {filteredItems.map((itemDetail, index) => {
