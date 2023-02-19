@@ -10,19 +10,20 @@ import { collection, getDocs } from 'firebase/firestore'
 import FilterBar from './filter/FilterBar'
 
 
-const getFilteredItems = (query, menuItems) => {
-  if(!query){
-    return menuItems
-  }
-  else{  
-    return menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()))
-  }
-}
+// const getFilteredItems = (query, menuItems) => {
+//   if(!query){
+//     return menuItems
+//   }
+//   else{  
+//     return menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()))
+//   }
+// }
 
 const Menu = () => {
 
   const [menuItems, setMenuItems] = useState([])
   const menuItemsRef = collection(db, "menu-items")
+  const [filteredMenuItems, setFilteredMenuItems] = useState(menuItems)
 
   useEffect(() => {
     const getMenuItems = async () => {
@@ -31,14 +32,43 @@ const Menu = () => {
     }
 
     getMenuItems()
-  })
+  }, [])
 
-  const [query, setQuery] = useState('')
 
-  const filteredItems = getFilteredItems(query, menuItems)
+  // const [query, setQuery] = useState('')
+
+  // const filteredItems = getFilteredItems(query, menuItems)
 
   const generateCusineDataForDropdown = () => {
-    return [...new Set(filteredItems.map((itemDetail) => itemDetail.cusine))]
+    return [...new Set(menuItems.map((itemDetail) => itemDetail.cusine))]
+  }
+
+  // // const [allData, setData] = useState(filteredItems);
+
+
+  // const handleFilterCusine = (cusine) => {
+  //   const result = filteredItems.filter((item) => {
+  //     return item.cusine === cusine
+  //   })
+
+  //   setMenuItems(result);
+  // }
+
+  const handleFilterName = (name) => {
+    const filteredData = menuItems.filter((item) => {
+      if(item.name.toLowerCase().includes(name.toLowerCase())){
+        return item;
+      }
+    });
+    setFilteredMenuItems(filteredData)
+  }
+
+
+  const filterResult = (cusine) => {
+    const result = menuItems.filter((item) => {
+      return item.cusine === cusine;
+    })
+    setFilteredMenuItems(result)
   }
 
 
@@ -68,32 +98,32 @@ const Menu = () => {
           </p>
         </m.div>
       </div>
-      <div className="search-bar-container">
+      {/* <div className="search-bar-container">
         <label htmlFor="">Search</label>
         <input type="text" onChange={e => setQuery(e.target.value)}/>
-      </div>
+      </div> */}
       <div className="menu-page-main">
-        <FilterBar cusines={generateCusineDataForDropdown()}/>
+        <FilterBar filterResult={filterResult} cusines={generateCusineDataForDropdown()} onNameFilter={handleFilterName}/>
         <div className="cusine">
           <div className="menu-cards">
-            {filteredItems.map((itemDetail, index) => {
+            {filteredMenuItems.map((item, index) => {
               return (
               <div className="menu-card">
-                <h1 className="cusine-tag">{itemDetail.cusine}</h1>
-                <div className="food-image-container" style={{"backgroundImage": `url(${itemDetail.image})`}}>
-                  {/* <img src={itemDetail.image} alt={itemDetail.name} className="food-image" /> */}
+                <h1 className="cusine-tag">{item.cusine}</h1>
+                <div className="food-image-container" style={{"backgroundImage": `url(${item.image})`}}>
+                  {/* <img src={item.image} alt={item.name} className="food-image" /> */}
                 </div>
                 <div className="menu-text">
                   <div className="menu-text-top">
                     <div className="menu-text-top-heading-price">
-                      <h3 className="menu-text-top-heading" key={itemDetail.name}>{itemDetail.name}</h3>
-                      <p className="menu-text-top-price">${itemDetail.price}</p>
+                      <h3 className="menu-text-top-heading" key={item.name}>{item.name}</h3>
+                      <p className="menu-text-top-price">${item.price}</p>
                     </div>
-                    <p className="food-description">{itemDetail.description}</p>
+                    <p className="food-description">{item.description}</p>
                   </div>
                   <div className="menu-text-bottom">
-                    <p className="calories">{itemDetail.calories} CAL</p>
-                    <p className="dietary-restrictions">{itemDetail.restrictions}</p>
+                    <p className="calories">{item.calories} CAL</p>
+                    <p className="dietary-restrictions">{item.restrictions}</p>
                   </div>
                 </div>
               </div>

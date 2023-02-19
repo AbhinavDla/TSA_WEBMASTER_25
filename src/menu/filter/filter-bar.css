@@ -3,7 +3,27 @@
     min-width: 260px ;
     height: auto;
     border-right: 1px solid black;
-    padding-left: var(--default-spacing)
+    padding-left: var(--default-spacing);
+    padding-bottom: var(--default-spacing);
+}
+
+.filter-search{
+    padding: 2vw 0;
+}
+
+input{
+    padding: 1vw;
+    width: 80%;
+}
+
+label{
+    font-weight: bold;
+}
+
+select{
+    width: 90%;
+    padding: 1vw;
+    font-family: var(--base-font);
 }
 
 @media only screen and (max-width: 768px) {
