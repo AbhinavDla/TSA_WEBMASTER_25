@@ -106,7 +106,7 @@ const Menu = () => {
         <FilterBar filterResult={filterResult} cusines={generateCusineDataForDropdown()} onNameFilter={handleFilterName}/>
         <div className="cusine">
           <div className="menu-cards">
-            {filteredMenuItems.map((item, index) => {
+            {menuItems.map((item, index) => {
               return (
               <div className="menu-card">
                 <h1 className="cusine-tag">{item.cusine}</h1>

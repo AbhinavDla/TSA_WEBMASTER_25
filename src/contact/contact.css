@@ -129,7 +129,7 @@
     align-items: center;
     justify-content: center;
     
-    margin-bottom: 7rem;
+    margin-bottom: 10vw;
 }
 
 .contact-container{
@@ -219,7 +219,7 @@
     .contact-container{
         grid-template-columns: 1fr;
         gap: 1rem;
-        margin-top: 10rem;
+        margin-top: 30vw;
     }
 
     .form-input > input{
@@ -233,6 +233,6 @@
 
 @media only screen and (max-width: 325px){
     .contact-section{
-        margin-top: 10rem;
+        margin-top: 12rem;
     }
 }
