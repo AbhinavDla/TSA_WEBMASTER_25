@@ -1,10 +1,6 @@
 import React from 'react'
 import "./navbar.css"
-// import Logo from './green_spoon_logo.png'
-// import logoLight from "./logo_light.png"
 import {Link} from 'react-router-dom'
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-// import {faBars} from '@fortawesome/free-solid-svg-icons'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import {useRef} from 'react'
 
