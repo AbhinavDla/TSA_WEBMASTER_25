@@ -8,16 +8,23 @@
     padding-bottom: var(--default-spacing);
 }
 
-.search-bar-container > input{
-    padding: 1vw;
+.search-bar-main{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.search-bar-main > input{
+    padding: 0.6rem 1rem;
     margin-left: 0rem;
     width: 100%;
 }
 
-
-.search-bar-container > label{
-    font-weight: bold;
+.search-bar-main > button{
+    padding: 0.6rem 1rem;
+    height: 100%;
 }
+
 
 .menu-page-main{
     display: flex;
@@ -26,7 +33,7 @@
 }
 
 .cusine{
-    width: 70%;
+    width: 100%;
 }
 
 .menu-cards{
