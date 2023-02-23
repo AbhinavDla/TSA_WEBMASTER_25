@@ -9,6 +9,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {motion as m} from 'framer-motion'
 import { AnimatePresence } from 'framer-motion';
 // import ClipLoader from 'react-spinners/clip-loader'
+import ScrollToTop from "./ScrollToTop"
 
 function App() {
   // const [loading, setLoading] = useState(false)
@@ -23,6 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <AnimatePresence mode={"wait"}>
+        <ScrollToTop />
         <Routes>
             <Route path="/" element={<Homepage key={Route.pathname}/>}/>
             <Route path="/menu" element={<Menu key={Route.pathname}/>}/>
