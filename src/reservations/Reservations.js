@@ -22,7 +22,7 @@ const Reservations = () => {
 
     await addDoc(collection(db, 'reservations'), {
       email: email,
-      phone: phone,
+      phone: `+1 ${phone}`,
       guests: guests,
       name: name,
       time: [
