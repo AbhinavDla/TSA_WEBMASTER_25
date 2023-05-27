@@ -88,7 +88,7 @@ const Menu = () => {
           exit={{ opacity: 1 }}
         >
           <h1 className="background-hero-heading">
-            Fast, Tasty, and Always Fresh
+            Fast Tasty and Always Fresh
           </h1>
           <p className="background-hero-description">
             We have food options from almost any cusine you can think of
