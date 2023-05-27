@@ -15,12 +15,14 @@ const Reservations = () => {
   const [guests, setGuests] = useState("")
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
 
   const createReservation = async (e) => {
     e.preventDefault()
 
     await addDoc(collection(db, 'reservations'), {
       email: email,
+      phone: phone,
       guests: guests,
       name: name,
       time: [
@@ -91,6 +93,10 @@ const Reservations = () => {
               <div className="">
                 <label htmlFor="">Email</label>
                 <input type="text" name="email" id="" placeholder="example123@example.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
+              </div>
+              <div className="">
+              <label htmlFor="">Phone Number</label>
+                <input  type="tel" name="phone" id="" placeholder='123 456 7890' value={phone} onChange={(e)=> setPhone(e.target.value)}/>
               </div>
              
             </div>
