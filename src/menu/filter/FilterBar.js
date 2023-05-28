@@ -47,12 +47,12 @@ const FilterBar = ({filterResult, cusines, onNameFilter}) => {
             </option>
           ))}
         </select> 
-        {/* <button onClick={() => filterResult('')}>All</button>
+        <button onClick={() => filterResult('')}>All</button>
         <button onClick={() => filterResult('Thai')}>Thai</button>
         <button onClick={() => filterResult('Indian')}>Indian</button>
         <button onClick={() => filterResult('Italian')}>Italian</button>
         <button onClick={() => filterResult('Chinese')}>Chinese</button>
-        <button onClick={() => filterResult('Mexican')}>Mexican</button> */}
+        <button onClick={() => filterResult('Mexican')}>Mexican</button>
         
       </div>
     </div>
