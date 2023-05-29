@@ -9,6 +9,7 @@ const FilterBar = ({filterResult, cusines, onNameFilter}) => {
 
   const handleInput = (field) => (event) => {
     const {value} = event.target;
+    console.log(value);
 
     setFilters({
       ...filters,
@@ -29,14 +30,14 @@ const FilterBar = ({filterResult, cusines, onNameFilter}) => {
 
   return (
     <div className="filter-bar">
-      <div className="filter-search">
+      {/* <div className="filter-search">
         <label htmlFor="">Search</label>
         <input type="text" id="name" value={filters.name} onChange={handleInput("name")}/>
-      </div>
+      </div> */}
       <div className="">
         <label htmlFor="">Cusine</label>
         <br />
-        <select name="" id="cusine" onChange={handleInput("cusine")}>
+        <select name="cusine" id="cusine" onChange={handleInput("cusine")}>
           <option value="">Select</option>
           {cusines.map((cusine) => (
             <option 
@@ -47,13 +48,12 @@ const FilterBar = ({filterResult, cusines, onNameFilter}) => {
             </option>
           ))}
         </select> 
-        <button onClick={() => filterResult('')}>All</button>
+        {/* <button onClick={() => filterResult('')}>All</button>
         <button onClick={() => filterResult('Thai')}>Thai</button>
         <button onClick={() => filterResult('Indian')}>Indian</button>
         <button onClick={() => filterResult('Italian')}>Italian</button>
         <button onClick={() => filterResult('Chinese')}>Chinese</button>
-        <button onClick={() => filterResult('Mexican')}>Mexican</button>
-        
+        <button onClick={() => filterResult('Mexican')}>Mexican</button> */}
       </div>
     </div>
   )

@@ -7,22 +7,16 @@ import logoLight from "../logo_light.png";
 // import menuItems from "./menu_items"
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
-import {FaFilter} from "react-icons/fa"
+import { FaFilter } from "react-icons/fa"
 import FilterBar from "./filter/FilterBar";
 
-const getFilteredItems = (query, menuItems) => {
-  if(!query){
-    return menuItems
-  }
-  else{
-    return menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()))
-  }
-}
+
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
   const menuItemsRef = collection(db, "menu-items");
   const [filteredMenuItems, setFilteredMenuItems] = useState(menuItems);
+  //const [allData, setData] = useState(filteredItems);
 
   useEffect(() => {
     const getMenuItems = async () => {
@@ -35,13 +29,13 @@ const Menu = () => {
   }, []);
 
   const [query, setQuery] = useState('')
-  const filteredItems = getFilteredItems(query, menuItems)
+  //const filteredItems = getFilteredItems(query, menuItems)
 
-  // const generateCusineDataForDropdown = () => {
-  //   return [...new Set(menuItems.map((itemDetail) => itemDetail.cusine))];
-  // };
+  const generateCusineDataForDropdown = () => {
+    return [...new Set(menuItems.map((itemDetail) => itemDetail.cusine))];
+  };
 
-  // // const [allData, setData] = useState(filteredItems);
+
 
   // const handleFilterCusine = (cusine) => {
   //   const result = filteredItems.filter((item) => {
@@ -50,26 +44,41 @@ const Menu = () => {
 
   //   setMenuItems(result);
   // }
+  const getFilteredItems = (query, menuItems) => {
+    if (!query) {
+      const filteredData = menuItems;
+      setFilteredMenuItems(filteredData);
+      return menuItems
+    }
+    else {
+      const filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()));
+      setFilteredMenuItems(filteredData);
+      return filteredData;
+    }
+  }
+  const handleFilterName = (name) => {
+    if (name !== '') {
+      const filteredData = menuItems.filter((item) => {
+        if (item.name.toLowerCase().includes(name.toLowerCase())) {
+          return item.cusine === name;
+        }
+      })
+      setFilteredMenuItems(filteredData);
+    } else {
+      setFilteredMenuItems(menuItems);
+    }
+  };
 
-  // const handleFilterName = (name) => {
-  //   const filteredData = menuItems.filter((item) => {
-  //     if (item.name.toLowerCase().includes(name.toLowerCase())) {
-  //       return item;
-  //     }
-  //   });
-  //   setFilteredMenuItems(filteredData);
-  // };
-
-  // const filterResult = (cusine) => {
-  //   if (cusine !== '') {
-  //     const result = menuItems.filter((item) => {
-  //       return item.cusine === cusine;
-  //     });
-  //     setFilteredMenuItems(result);
-  //   } else {
-  //     setFilteredMenuItems(menuItems);
-  //   }
-  // };
+  const filterResult = (cusine) => {
+    if (cusine !== '') {
+      const result = menuItems.filter((item) => {
+        return item.cusine === cusine;
+      });
+      setFilteredMenuItems(result);
+    } else {
+      setFilteredMenuItems(menuItems);
+    }
+  };
 
   return (
     <m.div
@@ -98,19 +107,19 @@ const Menu = () => {
       <div className="search-bar-container">
         <label htmlFor="">Search</label>
         <div className="search-bar-main">
-          <input type="text" onChange={e => setQuery(e.target.value)} />
+          <input type="text" onChange={e => getFilteredItems(e.target.value, menuItems)} />
           <button><FaFilter /></button>
         </div>
       </div>
       <div className="menu-page-main">
-        {/* <FilterBar
+        <FilterBar
           filterResult={filterResult}
           cusines={generateCusineDataForDropdown()}
           onNameFilter={handleFilterName}
-        /> */}
+        />
         <div className="cusine">
           <div className="menu-cards">
-            {filteredItems.map((item, index) => {
+            {filteredMenuItems.map((item, index) => {
               return (
                 <div className="menu-card">
                   <h1 className="cusine-tag">{item.cusine}</h1>
@@ -118,7 +127,7 @@ const Menu = () => {
                     className="food-image-container"
                     style={{ backgroundImage: `url(${item.image})` }}
                   >
-                    {/* <img src={item.image} alt={item.name} className="food-image" /> */}
+
                   </div>
                   <div className="menu-text">
                     <div className="menu-text-top">
