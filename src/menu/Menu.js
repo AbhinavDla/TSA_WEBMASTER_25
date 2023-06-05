@@ -16,7 +16,8 @@ const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
   const menuItemsRef = collection(db, "menu-items");
   const [filteredMenuItems, setFilteredMenuItems] = useState(menuItems);
-  //const [allData, setData] = useState(filteredItems);
+
+  const [filteredMenuName, setFilteredMenuName] = useState("");  //const [allData, setData] = useState(filteredItems);
 
   useEffect(() => {
     const getMenuItems = async () => {
@@ -46,18 +47,28 @@ const Menu = () => {
   // }
   const getFilteredItems = (query, menuItems) => {
     if (!query) {
+      const name = filteredMenuName;
       const filteredData = menuItems;
+      if (name != "All") {
+        filteredData = menuItems.filter(x => x.cusine === name);
+      }
+
       setFilteredMenuItems(filteredData);
       return menuItems
     }
     else {
-      const filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()));
+      const name = filteredMenuName;
+      let filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()));
+      if (name != "All") {
+        filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()) && menuItem.cusine === name);
+      }
       setFilteredMenuItems(filteredData);
       return filteredData;
     }
   }
   const handleFilterName = (name) => {
     if (name !== '') {
+
       const filteredData = menuItems.filter((item) => {
         if (item.name.toLowerCase().includes(name.toLowerCase())) {
           return item.cusine === name;
@@ -66,17 +77,20 @@ const Menu = () => {
       setFilteredMenuItems(filteredData);
     } else {
       setFilteredMenuItems(menuItems);
+
     }
   };
 
   const filterResult = (cusine) => {
     if (cusine !== '') {
+      setFilteredMenuName(cusine)
       const result = menuItems.filter((item) => {
         return item.cusine === cusine;
       });
       setFilteredMenuItems(result);
     } else {
       setFilteredMenuItems(menuItems);
+      setFilteredMenuName("All")
     }
   };
 

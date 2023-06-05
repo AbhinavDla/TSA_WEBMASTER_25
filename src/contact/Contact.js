@@ -25,7 +25,7 @@ const Contact = () => {
       email: email,
       firstName: firstName,
       lastName: lastName,
-      phone: phoneNumber,
+      phone: `+1 ${phoneNumber}`,
       message: message,
       subscribed: checked
     })
