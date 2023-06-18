@@ -8,6 +8,8 @@ import emailjs from 'emailjs-com'
 import logoLight from "../logo_light.png"
 import {db} from "../firebase"
 import { collection, addDoc } from 'firebase/firestore'
+import SMSForm from '../SMSForm';
+
 
 const Reservations = () => {
   const [date, setDate] = useState("")
@@ -117,6 +119,8 @@ const Reservations = () => {
             <button className="reservations-btn" type="submit">Make A Reservation</button>
           </form>
         </section>
+
+
         <section className="other-reservation">
           <div className="other-reservation-container">
             <div className="section-header-container" id="other-reservation-section-header">
@@ -139,6 +143,9 @@ const Reservations = () => {
             </div>
           </div>
         </section>
+        
+        <SMSForm />
+        
         <Footer />
     </m.div>
   )

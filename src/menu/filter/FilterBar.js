@@ -38,7 +38,7 @@ const FilterBar = ({filterResult, cusines, onNameFilter}) => {
         <label htmlFor="">Cusine</label>
         <br />
         <select name="cusine" id="cusine" onChange={handleInput("cusine")}>
-          <option value="">Select</option>
+          <option value="">All Items</option>
           {cusines.map((cusine) => (
             <option 
               value={cusine}

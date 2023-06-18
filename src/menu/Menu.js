@@ -9,11 +9,14 @@ import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { FaFilter } from "react-icons/fa"
 import FilterBar from "./filter/FilterBar";
+// import ScrollToTop from "../ScrollToTop";
 
 
 
 const Menu = () => {
-  const [menuItems, setMenuItems] = useState([]);
+  
+
+  const [menuItems, setMenuItems] = useState([]); 
   const menuItemsRef = collection(db, "menu-items");
   const [filteredMenuItems, setFilteredMenuItems] = useState(menuItems);
 
@@ -47,17 +50,28 @@ const Menu = () => {
   // }
   const getFilteredItems = (query, menuItems) => {
     if (!query) {
-      const name = filteredMenuName;
-      const filteredData = menuItems;
-      if (name != "All") {
-        filteredData = menuItems.filter(x => x.cusine === name);
-      }
+      if(query==''){
 
-      setFilteredMenuItems(filteredData);
-      return menuItems
+        let filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()));
+
+        setFilteredMenuItems(filteredData);
+        return filteredData
+      }
+      else{
+        const name = filteredMenuName;
+        const filteredData = menuItems;
+        if (name != "All") {
+          filteredData = menuItems.filter(x => x.cusine === name);
+        }
+        
+  
+        setFilteredMenuItems(filteredData);
+        return menuItems
+      }
+     
     }
     else {
-      const name = filteredMenuName;
+      const name = filteredMenuName ===''?"All":filteredMenuName;
       let filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()));
       if (name != "All") {
         filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()) && menuItem.cusine === name);
@@ -96,12 +110,14 @@ const Menu = () => {
 
   return (
     <m.div
+    
       initial={{ opacity: 0.5 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.95, ease: "easeOut" }}
       exit={{ opacity: 1 }}
     >
       <div className="background-hero" id="menu-background">
+      
         <Navbar logo={logoLight} color="white" navLinkColor="white" />
         <m.div
           className="background-hero-text"
@@ -131,6 +147,7 @@ const Menu = () => {
           cusines={generateCusineDataForDropdown()}
           onNameFilter={handleFilterName}
         />
+        
         <div className="cusine">
           <div className="menu-cards">
             {filteredMenuItems.map((item, index) => {
