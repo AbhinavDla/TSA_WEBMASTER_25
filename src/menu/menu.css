@@ -5,7 +5,7 @@
 .search-bar-container{
     padding: 0 var(--default-spacing);
     padding-top: var(--default-spacing);
-    padding-bottom: var(--default-spacing);
+    padding-bottom: 1.5vw;
 }
 
 .search-bar-main{
@@ -28,7 +28,7 @@
 
 .menu-page-main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 0;
 }
 
@@ -49,7 +49,7 @@
 .menu-card{
     width: 20%;
     height: 500px;
-    min-width: 300px;
+    min-width: 280px;
     max-height: 500px;
     display: flex;
     flex-direction: column;

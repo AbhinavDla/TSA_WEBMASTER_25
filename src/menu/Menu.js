@@ -9,17 +9,16 @@ import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { FaFilter } from "react-icons/fa"
 import FilterBar from "./filter/FilterBar";
+import { ifError } from "assert";
 // import ScrollToTop from "../ScrollToTop";
 
 
 
 const Menu = () => {
   
-
   const [menuItems, setMenuItems] = useState([]); 
   const menuItemsRef = collection(db, "menu-items");
   const [filteredMenuItems, setFilteredMenuItems] = useState(menuItems);
-
   const [filteredMenuName, setFilteredMenuName] = useState("");  //const [allData, setData] = useState(filteredItems);
 
   useEffect(() => {
@@ -39,18 +38,9 @@ const Menu = () => {
     return [...new Set(menuItems.map((itemDetail) => itemDetail.cusine))];
   };
 
-
-
-  // const handleFilterCusine = (cusine) => {
-  //   const result = filteredItems.filter((item) => {
-  //     return item.cusine === cusine
-  //   })
-
-  //   setMenuItems(result);
-  // }
   const getFilteredItems = (query, menuItems) => {
     if (!query) {
-      if(query==''){
+      if(query == ''){
 
         let filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()));
 
@@ -71,7 +61,7 @@ const Menu = () => {
      
     }
     else {
-      const name = filteredMenuName ===''?"All":filteredMenuName;
+      const name = filteredMenuName ==='' ? "All" : filteredMenuName;
       let filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()));
       if (name != "All") {
         filteredData = menuItems.filter((menuItem) => menuItem.name.toLowerCase().includes(query.toLowerCase()) && menuItem.cusine === name);
@@ -108,6 +98,11 @@ const Menu = () => {
     }
   };
 
+  const [isFiltersVisible, setIsFiltersVisible] = useState(true)
+  const toggleFilters = () => {
+    setIsFiltersVisible(!isFiltersVisible);
+  }
+
   return (
     <m.div
     
@@ -138,15 +133,18 @@ const Menu = () => {
         <label htmlFor="">Search</label>
         <div className="search-bar-main">
           <input type="text" onChange={e => getFilteredItems(e.target.value, menuItems)} />
-          <button><FaFilter /></button>
+          <button onClick={toggleFilters}><FaFilter /></button>
         </div>
       </div>
       <div className="menu-page-main">
-        <FilterBar
-          filterResult={filterResult}
-          cusines={generateCusineDataForDropdown()}
-          onNameFilter={handleFilterName}
-        />
+        {
+          isFiltersVisible && 
+          <FilterBar
+            filterResult={filterResult}
+            cusines={generateCusineDataForDropdown()}
+            onNameFilter={handleFilterName}
+          />
+        }
         
         <div className="cusine">
           <div className="menu-cards">

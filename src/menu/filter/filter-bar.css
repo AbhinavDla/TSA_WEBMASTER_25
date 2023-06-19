@@ -1,8 +1,7 @@
 .filter-bar{
     width: 25%;
     min-width: 260px ;
-    height: auto;
-    border-right: 1px solid black;
+    height: auto;   
     padding-left: var(--default-spacing);
     padding-bottom: var(--default-spacing);
 }
@@ -26,11 +25,11 @@ select{
     font-family: var(--base-font);
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .filter-bar{
         width: 100%;
         height: 200px;
         border-right: none;
         border-bottom: 1px solid black
     }
-}
+} */
