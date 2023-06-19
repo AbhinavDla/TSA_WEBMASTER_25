@@ -98,7 +98,7 @@ const Menu = () => {
     }
   };
 
-  const [isFiltersVisible, setIsFiltersVisible] = useState(true)
+  const [isFiltersVisible, setIsFiltersVisible] = useState(false)
   const toggleFilters = () => {
     setIsFiltersVisible(!isFiltersVisible);
   }
