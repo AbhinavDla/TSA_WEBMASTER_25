@@ -12,6 +12,9 @@ import {motion as m} from 'framer-motion'
 import logoLight from "../logo_light.png"
 import logoDark from "../green_spoon_logo.png"
 import { useMediaQuery } from 'react-responsive';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
 
 const Homepage = () => {
   // const [isMobile, setIsMobile] = useState(false)
@@ -191,6 +194,7 @@ const Homepage = () => {
         <div class="section-header-container">
             <h2 class="section-header">Testimonials</h2>
         </div>
+        
         <div class="testimonial-card-container">
             <div class="testimonial-card">
                 <div class="user-img-container">
@@ -257,6 +261,7 @@ const Homepage = () => {
                 </div>
             </div>
         </div>
+        
       </section>
       <Footer />
     </m.div>

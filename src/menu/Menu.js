@@ -9,7 +9,7 @@ import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { FaFilter } from "react-icons/fa"
 import FilterBar from "./filter/FilterBar";
-import { ifError } from "assert";
+// import { ifError } from "assert";
 // import ScrollToTop from "../ScrollToTop";
 
 
