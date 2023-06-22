@@ -118,7 +118,7 @@ const Reservations = () => {
             </div>
             <button className="reservations-btn" type="submit">Make A Reservation</button>
           </form>
-          <SMSForm></SMSForm>
+        
         </section>
 
 

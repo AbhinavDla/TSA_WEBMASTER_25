@@ -14,6 +14,7 @@ import logoDark from "../green_spoon_logo.png"
 import { useMediaQuery } from 'react-responsive';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import SMSForm from '../SMSForm'
 
 
 const Homepage = () => {
@@ -263,6 +264,7 @@ const Homepage = () => {
         </div>
         
       </section>
+      <SMSForm/>
       <Footer />
     </m.div>
   )

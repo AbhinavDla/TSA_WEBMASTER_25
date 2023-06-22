@@ -26,7 +26,9 @@ class SMSForm extends Component {
       },
       body: JSON.stringify(this.state.message)
     })
-      .then(res => res.json())
+      .then(res => {
+        res.json()}
+        )
       .then(data => {
         if (data.success) {
           this.setState({
