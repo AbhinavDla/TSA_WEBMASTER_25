@@ -16,8 +16,10 @@
     "firebase": "^9.17.1",
     "framer-motion": "^7.10.2",
     "google-maps-react": "^2.0.6",
+    "http-proxy-middleware": "^2.0.6",
     "https-browserify": "^1.0.0",
     "net": "^1.0.2",
+    "npm-run-all": "^4.1.5",
     "os-browserify": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -43,25 +45,28 @@
     "server": "node-env-run server --exec nodemon | pino-colada",
     "dev": "run-p server start"
   },
+  "proxy": "http:///localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
-    "netlify-cli": "^12.2.9"
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-pino-logger": "^5.0.0",
+    "netlify-cli": "^12.2.9",
+    "node-env-run": "^4.0.2",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^2.1.0",
+    "twilio": "^3.83.3"
   }
 }

@@ -16,6 +16,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 
+
 const Homepage = () => {
   // const [isMobile, setIsMobile] = useState(false)
  
@@ -263,6 +264,7 @@ const Homepage = () => {
         </div>
         
       </section>
+   
       <Footer />
     </m.div>
   )
