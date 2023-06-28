@@ -128,63 +128,63 @@ const Homepage = () => {
         <div className="gallery-container w-2 h-3">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?food" alt="" />
+              <img src="https://www.funktionevents.co.uk/images/pictures/new/uk/activities/restaurants-and-meals/restaurant-meals-event-(1600x1200-crop).jpg?v=822b168e" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-1 h-3">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?eating" alt="" />
+              <img src="https://naoko3.com/wp-content/uploads/2021/03/shutterstock_1141626794-1920x1280.jpg" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-1 h-1">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?restaurant" alt="" />
+              <img src="https://th.bing.com/th/id/OIP.3BRfahfH4UII_aM7d0C-3QHaE5?pid=ImgDet&rs=1" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-1 h-2">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?diningtable" alt="" />
+              <img src="https://th.bing.com/th/id/R.62340f5abba86aa5637d6336ba56f6c2?rik=nq1m5afGc6403A&pid=ImgRaw&r=0" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-1 h-4">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?thaifood" alt="" />
+              <img src="https://th.bing.com/th/id/R.b11a551459c2ac68f5796fd94daef1c6?rik=Fjd5JS1dhMhtbQ&riu=http%3a%2f%2fyesofcorsa.com%2fwp-content%2fuploads%2f2018%2f02%2fThai-Cuisine-Desktop-Wallpaper.jpg&ehk=oidQ7nRtDlmKTnV7zhPHP68WGzKpmLAyAzu1k6S6Z5U%3d&risl=&pid=ImgRaw&r=0" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-1 h-4">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?italianfood" alt="" />
+              <img src="https://wallpapercave.com/wp/wp4289092.jpg" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-1 h-1">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?mexicanfood" alt="" />
+              <img src="https://th.bing.com/th/id/OIP.MJ1a2lO7Qd_b69_vhv_aNwHaEK?pid=ImgDet&rs=1" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-1 h-1">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?indianfood" alt="" />
+              <img src="https://th.bing.com/th/id/OIP.wZyvTTfyBc-vqx6aWVkA5QHaE8?pid=ImgDet&rs=1" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-2 h-3">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://source.unsplash.com/1600x900/?greekfood" alt="" />
+              <img src="https://wallpapercave.com/wp/wp3495556.jpg" alt="" />
             </div>
           </div>
         </div>
