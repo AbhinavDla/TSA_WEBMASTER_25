@@ -61,8 +61,8 @@ const Footer = () => {
         </a>
     </footer>
     <div className="credits">
-        <p>Saakshith Chikoti, Veer Jain, Vedant Lad</p>
-        <p className="copyright">&copy;The Green Spoon 2023</p>
+        <p>Saakshith Chikoti, Prasanna Patil, Abhinav Damarla, Sathvik Kotapati, Ankit Panja</p>
+        <p className="copyright">&copy;The Green Spoon 2024</p>
     </div>
     </>
   )
