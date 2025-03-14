@@ -5,7 +5,7 @@ import heroImage from "./hero_img.png"
 import "./homepage.css"
 import ourStoryImage1 from "./our_story_image_1.jpg"
 import edibleSpoon from "./edible_spoon.jpg"
-import backgroundVideo from "./background_video.mp4"
+import backgroundVideo from "./backgroundVideo.mp4"
 import promoVideo from "./promo_video.mp4"
 import {Link} from 'react-router-dom'
 import {motion as m} from 'framer-motion'
@@ -129,7 +129,7 @@ const Homepage = () => {
         <div className="gallery-container w-2 h-3">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://www.funktionevents.co.uk/images/pictures/new/uk/activities/restaurants-and-meals/restaurant-meals-event-(1600x1200-crop).jpg?v=822b168e" alt="" />
+              <img src="https://images.squarespace-cdn.com/content/v1/60d6618fc701284789e2be79/2d4ac3ba-061d-4917-afd0-064bb8ed2051/IMG_5709.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -150,14 +150,14 @@ const Homepage = () => {
         <div className="gallery-container w-1 h-2">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://th.bing.com/th/id/R.62340f5abba86aa5637d6336ba56f6c2?rik=nq1m5afGc6403A&pid=ImgRaw&r=0" alt="" />
+              <img src="https://www.eatingwell.com/thmb/3W8I0YWJeMgMZoi_7Vbs5AEzXUw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Mediterranean-Diet-Flatlay-04-1x1-1-85f522bcda2c4e0cb2eb269ad2356aff.jpg" alt="" />
             </div>
           </div>
         </div>
         <div className="gallery-container w-1 h-4">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://th.bing.com/th/id/R.b11a551459c2ac68f5796fd94daef1c6?rik=Fjd5JS1dhMhtbQ&riu=http%3a%2f%2fyesofcorsa.com%2fwp-content%2fuploads%2f2018%2f02%2fThai-Cuisine-Desktop-Wallpaper.jpg&ehk=oidQ7nRtDlmKTnV7zhPHP68WGzKpmLAyAzu1k6S6Z5U%3d&risl=&pid=ImgRaw&r=0" alt="" />
+              <img src="https://parsleyandparm.com/wp-content/uploads/2022/05/Mediterranean-Chickpea-Skillet-16.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ const Homepage = () => {
         <div className="gallery-container w-2 h-3">
           <div className="gallery-item">
             <div className="image">
-              <img src="https://wallpapercave.com/wp/wp3495556.jpg" alt="" />
+              <img src="https://nocrumbsleft.net/wp-content/uploads/2021/06/vegan-mediterranean-salad.jpg" alt="" />
             </div>
           </div>
         </div>
