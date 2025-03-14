@@ -203,7 +203,7 @@ const Homepage = () => {
                 </div>
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
-                        <h2 class="user-name">Muhammad Zaidi</h2>
+                        <h2 class="user-name">Muhammad Rasheed</h2>
                         <h3 class="user-location">★★★★★</h3>
                     </div>
                     <div class="user-rating-container-bottom">
@@ -219,7 +219,7 @@ const Homepage = () => {
                 </div>
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
-                        <h2 class="user-name">Vedant Lad</h2>
+                        <h2 class="user-name">Kevin Desai</h2>
                         <h3 class="user-location">★★★★★</h3>
                     </div>
                     <div class="user-rating-container-bottom">
@@ -235,7 +235,7 @@ const Homepage = () => {
                 </div>
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
-                        <h2 class="user-name">Saakshith Chikoti</h2>
+                        <h2 class="user-name">Sukesh Panda</h2>
                         <h3 class="user-location">★★★★★</h3>
                     </div>
                     <div class="user-rating-container-bottom">
@@ -251,7 +251,7 @@ const Homepage = () => {
                 </div>
                 <div class="user-rating-container">
                     <div class="user-rating-container-top">
-                        <h2 class="user-name">Veer Jain</h2>
+                        <h2 class="user-name">Veer Khan</h2>
                         <h3 class="user-location">★★★★★</h3>
                     </div>
                     <div class="user-rating-container-bottom">
