@@ -27,7 +27,7 @@ const Navbar = (props) => {
             <li className="nav-item"><Link to="/menu"><a href="" style={{color: props.navLinkColor}}>Menu</a></Link></li>
             <li className="nav-item"><Link to="/reservations"><a href="" style={{color: props.navLinkColor}}>Reservations</a></Link></li>
             <li className="nav-item"><Link to="/contact"><a href="" style={{color: props.navLinkColor}}>Contact</a></Link></li>
-            <li className="nav-item"><a href="https://docs.google.com/document/d/1h216nrZcAgJZVN_qE_03IFTYkC0JWm9-6OrpQcKi3Fg/edit?usp=sharing" target="_blank" style={{color: props.navLinkColor}}>Documentation</a></li>
+            <li className="nav-item"><a href="https://docs.google.com/document/d/1F8waobt6WZkXmDf3cWt_h3rL9T48wrJBOIvjPwawcGE/edit?usp=sharing" target="_blank" style={{color: props.navLinkColor}}>Documentation</a></li>
             <li className="nav-item"><Link to="https://thegreenspoonadmin.netlify.app"><button className='admin-button'> For Admins</button></Link></li>
             <button onClick={showNavbar} className="hamburger nav-close-button">
                 <FaTimes />
